@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Travora Blog - Read the latest travel tips, destination guides, and inspiring stories from around the world." />
+  <title>Travora - Blog</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/Images/plane.svg">
+  <link rel="stylesheet" href="../assets/CSS/bootstrap.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="../assets/CSS/Style.css" />
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== --> 
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar"> 
+  <div class="container py-2"> 
+    <a class="navbar-brand fw-bold fs-3 neuton-bold" href="../index.html"> 
+       <img class="footer-logo" src="../assets/Images/Travora Navbar.png" alt="Travora Logo" /> 
+    </a> 
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
+      <span class="navbar-toggler-icon"></span> 
+    </button> 
+    <div class="collapse navbar-collapse" id="navbarNav"> 
+      <ul class="navbar-nav mx-auto align-items-lg-center"> 
+        <li class="nav-item"><a class="nav-link fw-medium" href="../index.html" id="nav-home">Home</a></li> 
+        <li class="nav-item dropdown"> 
+          <a class="nav-link dropdown-toggle fw-medium" href="#" id="nav-pages" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a> 
+          <ul class="dropdown-menu" aria-labelledby="nav-pages"> 
+            <li><a class="dropdown-item" href="destinations.html">Destinations</a></li> 
+            <li><a class="dropdown-item" href="about-us.html">About Us</a></li> 
+            <li><a class="dropdown-item" href="our-service.html">Our Service</a></li> 
+            <li><a class="dropdown-item" href="contact.html">Contact</a></li> 
+            <li><a class="dropdown-item" href="gallery.html">Gallery</a></li> 
+            <li><a class="dropdown-item" href="price-table.html">Price Table</a></li> 
+          </ul> 
+        </li> 
+        <li class="nav-item dropdown"> 
+          <a class="nav-link dropdown-toggle fw-medium" href="#" id="nav-tours" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tour List</a> 
+          <ul class="dropdown-menu" aria-labelledby="nav-tours"> 
+            <li><a class="dropdown-item" href="tour-grid.html">Tour Grid</a></li> 
+            <li><a class="dropdown-item" href="data-pricing.html">Date &amp; Pricing</a></li> 
+          </ul> 
+        </li> 
+        <li class="nav-item dropdown"> 
+          <a class="nav-link dropdown-toggle fw-medium" href="#" id="nav-rooms" role="button" data-bs-toggle="dropdown" aria-expanded="false">Room List</a> 
+          <ul class="dropdown-menu" aria-labelledby="nav-rooms"> 
+            <li><a class="dropdown-item" href="room-grid.html">Room Grid</a></li> 
+            <li><a class="dropdown-item" href="room-cart.html">Room Cart</a></li> 
+          </ul> 
+        </li> 
+        <li class="nav-item dropdown"> 
+          <a class="nav-link dropdown-toggle fw-medium" href="#" id="nav-search" role="button" data-bs-toggle="dropdown" aria-expanded="false">Search</a> 
+          <ul class="dropdown-menu" aria-labelledby="nav-search"> 
+            <li><a class="dropdown-item" href="tour-search.html">Tour Search</a></li> 
+            <li><a class="dropdown-item" href="room-search.html">Room Search</a></li> 
+          </ul> 
+        </li> 
+        <li class="nav-item"><a class="nav-link active fw-medium" href="blog.html" id="nav-blog">Blog</a></li> 
+      </ul> 
+      <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0"> 
+        <div class="dropdown"> 
+          <button class="currency-btn btn bg-transparent border rounded-2 fw-semibold d-flex align-items-center gap-1 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"> 
+            <i class="bi bi-currency-dollar"></i> USD 
+          </button> 
+          <ul class="dropdown-menu dropdown-menu-end border-0 shadow rounded-3 py-2"> 
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="USD"><i class="bi bi-currency-dollar me-1"></i>USD</a></li> 
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EUR"><i class="bi bi-currency-euro me-1"></i>EUR</a></li> 
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="GBP"><i class="bi bi-currency-pound me-1"></i>GBP</a></li> 
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EGP"><i class="bi bi-currency-exchange me-1"></i>EGP</a></li> 
+          </ul> 
+        </div> 
+        <button class="btn btn-primary fw-semibold rounded-3 px-4" type="button" data-bs-toggle="modal" data-bs-target="#authModal">Login</button> 
+      </div> 
+    </div> 
+  </div> 
+</nav>
+
+<!-- BLOG HERO -->
+<div class="page-hero">
+  <div class="container">
+    <h1>Travel <span>Blog</span></h1>
+    <p>Tips, guides, and inspiring stories for the modern traveler.</p>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Blog</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<!-- BLOG MAIN CONTENT -->
+<section style="padding: 70px 0; background-color: #f7f9fc;">
+  <div class="container">
+    <div class="row g-5">
+
+      <!-- Blog posts column -->
+      <div class="col-lg-8">
+
+        <!-- Blog Post Detail -->
+        <div class="blog-detail-wrapper bg-white p-4 p-md-5 rounded-4 shadow-sm mb-5">
+          
+          <!-- Category & Title -->
+          <div class="mb-4">
+            <span id="blogDetailCategory" class="badge bg-primary mb-2 px-3 py-2 text-uppercase letter-spacing-1">Destinations</span>
+            <h2 id="blogDetailTitle" class="neuton-bold mt-2 mb-3" style="font-size: 2.2rem; line-height: 1.3;">Loading...</h2>
+            <div class="blog-meta d-flex flex-wrap gap-3 text-muted small">
+              <span><i class="bi bi-calendar3 me-1 text-primary"></i> <span id="blogDetailDate">Loading date...</span></span>
+              <span><i class="bi bi-person me-1 text-primary"></i> <span id="blogDetailAuthor">Loading author...</span></span>
+              <span><i class="bi bi-chat-dots me-1 text-primary"></i> 2 Comments</span>
+            </div>
+          </div>
+
+          <!-- Featured Image -->
+          <img id="blogDetailImage" src="" alt="Blog Featured Image" class="img-fluid rounded-4 mb-4 w-100" style="height: 400px; object-fit: cover;" />
+
+          <!-- Content -->
+          <div id="blogDetailContent" class="blog-detail-content mb-4 text-muted" style="line-height: 1.8;">
+            <p>Loading content...</p>
+          </div>
+
+          <!-- Extra Image -->
+          <img id="blogDetailExtraImg" src="" alt="Additional Image" class="img-fluid rounded-4 mb-4 w-100" style="height: 300px; object-fit: cover;" />
+
+          <!-- Tags & Share -->
+          <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 pt-4 border-top">
+            <div class="mb-3 mb-md-0" id="blogDetailTags">
+              <!-- Tags injected via JS -->
+            </div>
+            <div class="social-share d-flex gap-2">
+              <span class="text-muted fw-semibold me-2 align-self-center">Share:</span>
+              <a href="#" aria-label="Share on Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="Share on Twitter"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" aria-label="Share on LinkedIn"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Author Box -->
+        <div class="author-box mb-5">
+          <div class="author-avatar flex-shrink-0 d-flex align-items-center justify-content-center bg-primary text-white rounded-circle" style="width: 70px; height: 70px; font-size: 1.5rem; font-weight: bold;">
+            <span id="blogAuthorInitials">A</span>
+          </div>
+          <div>
+            <h5 class="neuton-bold mb-2">Written by <span id="blogAuthorName">Author</span></h5>
+            <p class="text-muted mb-0 small" style="line-height: 1.6;">A passionate traveler and storyteller dedicated to discovering the world's most beautiful destinations and sharing practical tips for the modern explorer.</p>
+          </div>
+        </div>
+
+        <!-- Post Navigation -->
+        <div class="row g-3 mb-5">
+          <div class="col-sm-6" id="blogPrevWrap">
+            <a href="#" id="blogPrevBtn" class="blog-nav-link text-start h-100">
+              <small><i class="bi bi-arrow-left me-1"></i> Previous Post</small>
+              <span id="blogPrevTitle">Loading...</span>
+            </a>
+          </div>
+          <div class="col-sm-6 text-sm-end" id="blogNextWrap">
+            <a href="#" id="blogNextBtn" class="blog-nav-link text-end h-100">
+              <small>Next Post <i class="bi bi-arrow-right ms-1"></i></small>
+              <span id="blogNextTitle">Loading...</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Comments -->
+        <div class="comments-section bg-white p-4 p-md-5 rounded-4 shadow-sm mb-5">
+          <h3 class="neuton-bold mb-4">2 Comments</h3>
+          
+          <div class="comment-card d-flex gap-3">
+            <div class="comment-avatar flex-shrink-0"><img src="../assets/Images/Travel Tour Logo.png" alt="User" class="rounded-circle" style="width:50px; height:50px; object-fit:cover; background:#f0f0f0; padding:10px;"/></div>
+            <div>
+              <div class="d-flex justify-content-between mb-1">
+                <h6 class="fw-bold mb-0">David Thompson</h6>
+                <small class="text-muted">August 22, 2024</small>
+              </div>
+              <p class="text-muted small mb-2">This is such a great guide! I'm planning my trip next month and this information is incredibly helpful. Thank you for sharing.</p>
+              <a href="#" class="text-primary small fw-semibold text-decoration-none">Reply</a>
+            </div>
+          </div>
+          
+          <div class="comment-card d-flex gap-3">
+            <div class="comment-avatar flex-shrink-0"><img src="../assets/Images/Travel Tour Logo.png" alt="User" class="rounded-circle" style="width:50px; height:50px; object-fit:cover; background:#f0f0f0; padding:10px;"/></div>
+            <div>
+              <div class="d-flex justify-content-between mb-1">
+                <h6 class="fw-bold mb-0">Maria Garcia</h6>
+                <small class="text-muted">August 25, 2024</small>
+              </div>
+              <p class="text-muted small mb-2">The photos are stunning! I've always wanted to visit and your article just convinced me to finally book the tickets.</p>
+              <a href="#" class="text-primary small fw-semibold text-decoration-none">Reply</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leave a Reply -->
+        <div class="reply-section bg-white p-4 p-md-5 rounded-4 shadow-sm">
+          <h3 class="neuton-bold mb-4">Leave a Reply</h3>
+          <p class="text-muted small mb-4">Your email address will not be published. Required fields are marked *</p>
+          <form id="commentForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label small fw-semibold">Name *</label>
+                <input type="text" class="form-control" id="commentName" required />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-semibold">Email *</label>
+                <input type="email" class="form-control" id="commentEmail" required />
+              </div>
+              <div class="col-12">
+                <label class="form-label small fw-semibold">Comment *</label>
+                <textarea class="form-control" id="commentText" rows="5" required></textarea>
+              </div>
+              <div class="col-12 mt-4">
+                <button type="submit" class="btn btn-primary fw-semibold px-4 py-2 rounded-3">Post Comment</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div><!-- End blog posts column -->
+
+      <!-- Sidebar -->
+      <div class="col-lg-4">
+
+        <!-- Search widget -->
+        <div class="sidebar-card">
+          <h5>Search</h5>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search articles..." style="border-color:#e8eef4; border-radius:8px 0 0 8px;" />
+            <button class="btn" style="background:#5c98f2; color:#fff; border-radius:0 8px 8px 0; border:none;" type="button"><i class="bi bi-search"></i></button>
+          </div>
+        </div>
+
+        <!-- Categories widget -->
+        <div class="sidebar-card">
+          <h5>Categories</h5>
+          <ul class="category-list">
+            <li><a href="#">Destinations</a><span class="category-count">12</span></li>
+            <li><a href="#">Travel Tips</a><span class="category-count">8</span></li>
+            <li><a href="#">Adventure</a><span class="category-count">6</span></li>
+            <li><a href="#">Water Sports</a><span class="category-count">4</span></li>
+            <li><a href="#">Diving</a><span class="category-count">3</span></li>
+          </ul>
+        </div>
+
+        <!-- Recent Posts widget -->
+        <div class="sidebar-card">
+          <h5>Recent Posts</h5>
+          <div class="recent-post">
+            <img src="../assets/Images/Tour Two Moscow Tour of 7days.jpg" alt="Moscow tour" />
+            <div>
+              <div class="recent-post-title">Two Moscow Tour of 7 Days - A Complete Traveler's Review</div>
+              <div class="recent-post-date"><i class="bi bi-calendar3 me-1"></i>July 5, 2024</div>
+            </div>
+          </div>
+          <div class="recent-post">
+            <img src="../assets/Images/Tour Venice Rome and Milan 9 Days.jpg" alt="Italy tour" />
+            <div>
+              <div class="recent-post-title">Venice, Rome and Milan: 9 Days of Italian Perfection</div>
+              <div class="recent-post-date"><i class="bi bi-calendar3 me-1"></i>June 28, 2024</div>
+            </div>
+          </div>
+          <div class="recent-post">
+            <img src="../assets/Images/Tour 5Day Oahu Tour Honolulu.jpg" alt="Hawaii Oahu tour" />
+            <div>
+              <div class="recent-post-title">5 Days in Oahu: The Best of Honolulu and Beyond</div>
+              <div class="recent-post-date"><i class="bi bi-calendar3 me-1"></i>June 20, 2024</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tags widget -->
+        <div class="sidebar-card">
+          <h5>Tags</h5>
+          <div class="tag-cloud">
+            <a href="#">Europe</a>
+            <a href="#">Africa</a>
+            <a href="#">Asia</a>
+            <a href="#">America</a>
+            <a href="#">Beach</a>
+            <a href="#">Safari</a>
+            <a href="#">Diving</a>
+            <a href="#">City Tour</a>
+            <a href="#">Luxury</a>
+            <a href="#">Adventure</a>
+            <a href="#">Budget Travel</a>
+          </div>
+        </div>
+
+      </div><!-- End sidebar -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer id="footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-3 col-md-6">
+        <img class="footer-logo" src="../assets/Images/Travora Footer2.png" alt="Travora Logo" />
+        <p>Your trusted partner for extraordinary travel experiences around the globe.</p>
+        <div class="dropdown mt-3">
+          <button class="currency-btn btn border rounded-2 fw-semibold d-flex align-items-center gap-1 dropdown-toggle" style="color: var(--tt-footer-text); border-color: rgba(255,255,255,0.15) !important;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-currency-dollar"></i> USD
+          </button>
+          <ul class="dropdown-menu border-0 shadow rounded-3 py-2">
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="USD"><i class="bi bi-currency-dollar me-1"></i>USD</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EUR"><i class="bi bi-currency-euro me-1"></i>EUR</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="GBP"><i class="bi bi-currency-pound me-1"></i>GBP</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EGP"><i class="bi bi-currency-exchange me-1"></i>EGP</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Contact</h5>
+        <p><i class="bi bi-telephone me-2 text-primary"></i>T: 1-634-567-34</p>
+        <p><i class="bi bi-envelope me-2 text-primary"></i>E: contact@traveltourtheme.co</p>
+        <div class="footer-social mt-3">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+          <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Useful Links</h5>
+        <ul class="footer-links">
+          <li><a href="blog.html">Travel Blog &amp; Tips</a></li>
+          <li><a href="about-us.html">Working With Us</a></li>
+          <li><a href="contact.html">Be Our Partner</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Pay Safely With Us</h5>
+        <p>The payment is encrypted and transmitted securely with an SSL protocol.</p>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="payment-icon"><i class="bi bi-credit-card-2-front"></i></span>
+          <span class="payment-icon"><i class="bi bi-credit-card"></i></span>
+          <span class="payment-icon"><i class="bi bi-paypal"></i></span>
+          <span class="payment-icon"><i class="bi bi-wallet2"></i></span>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+  </div>
+  <div class="footer-bottom">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <div>
+        <a href="../index.html">Home</a>
+        <a href="about-us.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="mb-0 text-muted">Copyright &copy; 2026 GoodLayers. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- UNIFIED AUTH MODAL -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg rounded-4">
+      <div class="modal-header border-bottom-0 pb-0">
+        <h5 class="modal-title neuton-bold fs-3" id="authModalLabel">Welcome to <span class="text-primary font-italic">Travora</span></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 p-md-5 pt-3">
+        
+        <!-- Nav Tabs -->
+        <ul class="nav nav-pills nav-fill mb-4 bg-light rounded-pill p-1" id="authTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active rounded-pill fw-semibold" id="login-tab" data-bs-toggle="pill" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Login</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-pill fw-semibold" id="register-tab" data-bs-toggle="pill" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">Register</button>
+          </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="authTabContent">
+          <!-- Login Form -->
+          <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+            <form id="loginForm" novalidate>
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label fw-semibold text-dark" style="font-size:13px;">Email Address <span class="text-primary">*</span></label>
+                <input type="email" class="form-control px-3 py-2" id="loginEmail" placeholder="you@example.com" required />
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label fw-semibold text-dark" style="font-size:13px;">Password <span class="text-primary">*</span></label>
+                <input type="password" class="form-control px-3 py-2" id="loginPassword" placeholder="Enter your password" required />
+              </div>
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="rememberMe" />
+                  <label class="form-check-label text-muted" for="rememberMe" style="font-size:13px;">Remember me</label>
+                </div>
+                <a href="#" class="text-primary text-decoration-none fw-medium" style="font-size:13px;">Forgot password?</a>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 fw-semibold py-2 rounded-3">Login</button>
+            </form>
+          </div>
+
+          <!-- Register Form -->
+          <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+            <form id="registerForm" novalidate>
+              <div class="mb-3">
+                <label for="registerName" class="form-label fw-semibold text-dark" style="font-size:13px;">Full Name <span class="text-primary">*</span></label>
+                <input type="text" class="form-control px-3 py-2" id="registerName" placeholder="John Doe" required />
+              </div>
+              <div class="mb-3">
+                <label for="registerEmail" class="form-label fw-semibold text-dark" style="font-size:13px;">Email Address <span class="text-primary">*</span></label>
+                <input type="email" class="form-control px-3 py-2" id="registerEmail" placeholder="you@example.com" required />
+              </div>
+              <div class="mb-3">
+                <label for="registerPassword" class="form-label fw-semibold text-dark" style="font-size:13px;">Password <span class="text-primary">*</span></label>
+                <input type="password" class="form-control px-3 py-2" id="registerPassword" placeholder="Min. 6 characters" required />
+              </div>
+              <div class="mb-4">
+                <label for="registerConfirmPassword" class="form-label fw-semibold text-dark" style="font-size:13px;">Confirm Password <span class="text-primary">*</span></label>
+                <input type="password" class="form-control px-3 py-2" id="registerConfirmPassword" placeholder="Repeat your password" required />
+              </div>
+              <button type="submit" class="btn btn-primary w-100 fw-semibold py-2 rounded-3">Create Account</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- BACK TO TOP BUTTON -->
+<button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<div class="toast-container-fixed"></div>
+
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

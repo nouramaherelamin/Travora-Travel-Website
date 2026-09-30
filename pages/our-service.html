@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Travora - Our Service page." />
+  <title>Travora - Our Service</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/Images/plane.svg">
+  <link rel="stylesheet" href="../assets/CSS/bootstrap.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="../assets/CSS/Style.css" />
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
+  <div class="container py-2">
+    <a class="navbar-brand fw-bold fs-3 neuton-bold" href="../index.html">
+      <img class="footer-logo" src="../assets/Images/Travora Navbar.png" alt="Travora Logo" />
+    </a>
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link fw-medium" href="../index.html" id="nav-home">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active fw-medium" href="#" id="nav-pages" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+          <ul class="dropdown-menu" aria-labelledby="nav-pages">
+            <li><a class="dropdown-item" href="destinations.html">Destinations</a></li>
+            <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+            <li><a class="dropdown-item" href="our-service.html">Our Service</a></li>
+            <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+            <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+            <li><a class="dropdown-item" href="price-table.html">Price Table</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-medium" href="#" id="nav-tours" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tour List</a>
+          <ul class="dropdown-menu" aria-labelledby="nav-tours">
+            <li><a class="dropdown-item" href="tour-grid.html">Tour Grid</a></li>
+            <li><a class="dropdown-item" href="data-pricing.html">Date &amp; Pricing</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-medium" href="#" id="nav-rooms" role="button" data-bs-toggle="dropdown" aria-expanded="false">Room List</a>
+          <ul class="dropdown-menu" aria-labelledby="nav-rooms">
+            <li><a class="dropdown-item" href="room-grid.html">Room Grid</a></li>
+            <li><a class="dropdown-item" href="room-cart.html">Room Cart</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-medium" href="#" id="nav-search" role="button" data-bs-toggle="dropdown" aria-expanded="false">Search</a>
+          <ul class="dropdown-menu" aria-labelledby="nav-search">
+            <li><a class="dropdown-item" href="tour-search.html">Tour Search</a></li>
+            <li><a class="dropdown-item" href="room-search.html">Room Search</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link fw-medium" href="blog.html" id="nav-blog">Blog</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+        <div class="dropdown">
+          <button class="currency-btn btn bg-transparent border rounded-2 fw-semibold d-flex align-items-center gap-1 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-currency-dollar"></i> USD
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end border-0 shadow rounded-3 py-2">
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="USD"><i class="bi bi-currency-dollar me-1"></i>USD</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EUR"><i class="bi bi-currency-euro me-1"></i>EUR</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="GBP"><i class="bi bi-currency-pound me-1"></i>GBP</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EGP"><i class="bi bi-currency-exchange me-1"></i>EGP</a></li>
+          </ul>
+        </div>
+        <button class="btn btn-primary fw-semibold rounded-3 px-4" type="button" data-bs-toggle="modal" data-bs-target="#authModal">Login</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== OUR SERVICE : PAGE TITLE ========== -->
+<section class="os-title-section">
+  <div class="container">
+    <h1>Our service</h1>
+    <p>What we do</p>
+  </div>
+</section>
+
+<!-- ========== OUR SERVICE : INTRO / VIDEO ========== -->
+<section class="os-intro">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6">
+        <span class="hero-badge d-inline-block rounded-pill mb-4">Great Service, Great Price!</span>
+        <h2 class="os-intro-heading">Freedom to discover, confidence to explore</h2>
+        <p class="os-intro-text">Leave your guidebooks at home and dive into the local cultures that make each destination so special. We&rsquo;ll connect you with our exclusive experiences. Each trip is carefully crafted to let enjoy your vacation.</p>
+        <a href="#" class="btn-blue">Learn More</a>
+      </div>
+      <div class="col-lg-6 position-relative">
+        <span class="os-dots d-none d-lg-block" style="left:-10px; bottom:-40px;" aria-hidden="true"></span>
+        <!-- NOTE: exact reference thumbnail (beach family under palm tree) was not
+             among the supplied assets; using an existing project travel photo as a
+             stand-in. Swap the src below for the exact image if you have it. -->
+        <div class="os-video-wrap">
+          <img src="../assets/Images/image4.jpg" alt="Family enjoying a beach vacation" />
+          <button type="button" class="os-play-btn" data-bs-toggle="modal" data-bs-target="#osVideoModal" aria-label="Play video">
+            <i class="bi bi-play-fill"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== OUR SERVICE : FEATURE CARDS ========== -->
+<section class="os-features pb-5 pb-lg-0">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="service-card os-feature-card h-100">
+          <img class="os-feature-icon" src="../assets/Images/L 700 Destinations.png" alt="700 Destinations icon" />
+          <h3>700 Destinations</h3>
+          <p>Our expert team handpicked all destinations in this site</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card os-feature-card h-100">
+          <img class="os-feature-icon" src="../assets/Images/L Best Price Gurantee.png" alt="Best Price Guarantee icon" />
+          <h3>Best Price Guarantee</h3>
+          <p>Price match within 48 hours of order confirmation</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card os-feature-card h-100">
+          <img class="os-feature-icon" src="../assets/Images/L Top Notch Support.png" alt="Top Notch Support icon" />
+          <h3>Top Notch Support</h3>
+          <p>We are here to help, before, during, and even after your trip.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== OUR SERVICE : EXPERIENCE / 20 YEARS ========== -->
+<section class="os-experience">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6">
+        <img class="os-experience-img" src="../assets/Images/Our_service 1.jpg" alt="Collage of Paris destinations and travel moments" />
+      </div>
+      <div class="col-lg-6 ps-lg-5">
+        <h2>We have been in the tourism industry for more than 20 years</h2>
+        <p class="os-intro-text mb-4">Leave your guidebooks at home and dive into the local cultures that make each destination so special. We&rsquo;ll connect you with our exclusive experiences.</p>
+
+        <div class="os-icon-list-item">
+          <i class="bi bi-airplane"></i>
+          <div>
+            <h4>Book With Confident</h4>
+            <p>Each trip is carefully crafted to leave you free to live in the moment and enjoy your vacation.</p>
+          </div>
+        </div>
+        <div class="os-icon-list-item">
+          <i class="bi bi-compass"></i>
+          <div>
+            <h4>Freedom to discover, confidence to explore</h4>
+            <p>Each trip is carefully crafted to leave you free to live in the moment and enjoy your vacation.</p>
+          </div>
+        </div>
+        <div class="os-icon-list-item mb-4">
+          <i class="bi bi-geo-alt"></i>
+          <div>
+            <h4>Dive into Culture</h4>
+            <p>Each trip is carefully crafted to leave you free to live in the moment and enjoy your vacation.</p>
+          </div>
+        </div>
+
+        <a href="#" class="btn-blue">Book Now!</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== OUR SERVICE : ENQUIRY ========== -->
+<section class="os-enquiry">
+  <div class="container">
+    <h2 class="text-center">Any questions? Feel free to ask us!</h2>
+    <div class="row gy-5 align-items-start">
+      <div class="col-lg-5 os-enquiry-info">
+        <p><strong class="text-dark">Have a question or comment about us?</strong> We love hearing from you! Complete the form and a member of our Customer Care team will get back to you soon.</p>
+        <p>Your Customer Care team is just a phone call away at<br /><a href="tel:2123437012" class="phone">212-343-7012.</a></p>
+        <p>Monday &ndash; Saturday, 9AM-5PM EST.</p>
+      </div>
+      <div class="col-lg-7">
+        <div class="os-form-card">
+          <form id="serviceEnquiryForm" novalidate>
+            <div class="mb-3">
+              <label for="osFullName" class="visually-hidden">Full Name</label>
+              <input type="text" class="form-control" id="osFullName" placeholder="Full Name*" required />
+            </div>
+            <div class="mb-3">
+              <label for="osEmail" class="visually-hidden">Email</label>
+              <input type="email" class="form-control" id="osEmail" placeholder="Email*" required />
+            </div>
+            <div class="mb-3">
+              <label for="osSubject" class="visually-hidden">Subject</label>
+              <input type="text" class="form-control" id="osSubject" placeholder="Subject*" required />
+            </div>
+            <div class="mb-3">
+              <label for="osMessage" class="visually-hidden">Message</label>
+              <textarea class="form-control" id="osMessage" rows="4" placeholder="Message*" required></textarea>
+            </div>
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" id="osAgreeTerms" required />
+              <label class="form-check-label os-terms-label" for="osAgreeTerms">by clicking here you agree to <a href="#">our terms and policy</a>.</label>
+            </div>
+            <button type="submit" class="btn-blue w-100 text-uppercase">Submit Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== OUR SERVICE : TESTIMONIALS ========== -->
+<section class="os-testimonials">
+  <div class="container">
+    <h2>What our customers are saying about us</h2>
+
+    <div id="osTestimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="hover">
+      <div class="os-testimonial-stage">
+        <div class="carousel-inner">
+
+          <!-- Slide 1 : center = David Doe -->
+          <div class="carousel-item active">
+            <div class="os-testimonial-row">
+              <div class="os-testimonial-card side d-none d-md-block">
+                <div class="os-testimonial-head">
+                  <div class="os-testimonial-user">
+                    <div>
+                      <h6 class="os-testimonial-name">Jennth Norz</h6>
+                      <span class="os-testimonial-loc">New York City</span>
+                    </div>
+                  </div>
+                  <div class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                </div>
+                <p class="os-testimonial-text">Our whole trip was booked without a hitch and every detail matched what we were promised. The team stayed responsive the entire time and we felt looked after from start to finish.</p>
+              </div>
+              <div class="os-testimonial-card center">
+                <div class="os-testimonial-head">
+                  <div class="os-testimonial-user">
+                    <div>
+                      <h6 class="os-testimonial-name">David Doe</h6>
+                      <span class="os-testimonial-loc">Traveler</span>
+                    </div>
+                  </div>
+                  <div class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                </div>
+                <p class="os-testimonial-text">The tours on this site are fantastic &mdash; my family and I had a wonderful time. The team was professional and attentive throughout, and I&rsquo;ll definitely recommend them to my friends.</p>
+              </div>
+              <div class="os-testimonial-card side d-none d-md-block">
+                <div class="os-testimonial-head">
+                  <div class="os-testimonial-user">
+                    <div>
+                      <h6 class="os-testimonial-name">Brittany Clark</h6>
+                      <span class="os-testimonial-loc">San Francisco</span>
+                    </div>
+                  </div>
+                  <div class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                </div>
+                <p class="os-testimonial-text">Booking with this team took all the stress out of planning. Everything was well organized and the customer service was excellent from the first call to the last day of the trip.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 : center = Brittany Clark -->
+          <div class="carousel-item">
+            <div class="os-testimonial-row">
+              <div class="os-testimonial-card side d-none d-md-block">
+                <div class="os-testimonial-head">
+                  <div class="os-testimonial-user">
+                    <div>
+                      <h6 class="os-testimonial-name">David Doe</h6>
+                      <span class="os-testimonial-loc">Traveler</span>
+                    </div>
+                  </div>
+                  <div class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                </div>
+                <p class="os-testimonial-text">The tours on this site are fantastic &mdash; my family and I had a wonderful time. The team was professional and attentive throughout, and I&rsquo;ll definitely recommend them to my friends.</p>
+              </div>
+              <div class="os-testimonial-card center">
+                <div class="os-testimonial-head">
+                  <div class="os-testimonial-user">
+                    <div>
+                      <h6 class="os-testimonial-name">Brittany Clark</h6>
+                      <span class="os-testimonial-loc">San Francisco</span>
+                    </div>
+                  </div>
+                  <div class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                </div>
+                <p class="os-testimonial-text">Booking with this team took all the stress out of planning. Everything was well organized and the customer service was excellent from the first call to the last day of the trip.</p>
+              </div>
+              <div class="os-testimonial-card side d-none d-md-block">
+                <div class="os-testimonial-head">
+                  <div class="os-testimonial-user">
+                    <div>
+                      <h6 class="os-testimonial-name">Frances Hill</h6>
+                      <span class="os-testimonial-loc">San Francisco</span>
+                    </div>
+                  </div>
+                  <div class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                </div>
+                <p class="os-testimonial-text">From the itinerary to the little details, everything felt personal and well thought out. It&rsquo;s clear this team genuinely cares about giving travelers a great experience.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 : center = Frances Hill -->
+          <div class="carousel-item">
+            <div class="os-testimonial-row">
+              <div class="os-testimonial-card side d-none d-md-block">
+                <div class="os-testimonial-head">
+                  <div class="os-testimonial-user">
+                    <div>
+                      <h6 class="os-testimonial-name">Brittany Clark</h6>
+                      <span class="os-testimonial-loc">San Francisco</span>
+                    </div>
+                  </div>
+                  <div class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                </div>
+                <p class="os-testimonial-text">Booking with this team took all the stress out of planning. Everything was well organized and the customer service was excellent from the first call to the last day of the trip.</p>
+              </div>
+              <div class="os-testimonial-card center">
+                <div class="os-testimonial-head">
+                  <div class="os-testimonial-user">
+                    <div>
+                      <h6 class="os-testimonial-name">Frances Hill</h6>
+                      <span class="os-testimonial-loc">San Francisco</span>
+                    </div>
+                  </div>
+                  <div class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                </div>
+                <p class="os-testimonial-text">From the itinerary to the little details, everything felt personal and well thought out. It&rsquo;s clear this team genuinely cares about giving travelers a great experience.</p>
+              </div>
+              <div class="os-testimonial-card side d-none d-md-block">
+                <div class="os-testimonial-head">
+                  <div class="os-testimonial-user">
+                    <div>
+                      <h6 class="os-testimonial-name">Jennth Norz</h6>
+                      <span class="os-testimonial-loc">New York City</span>
+                    </div>
+                  </div>
+                  <div class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                </div>
+                <p class="os-testimonial-text">Our whole trip was booked without a hitch and every detail matched what we were promised. The team stayed responsive the entire time and we felt looked after from start to finish.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 : center = Jennth Norz -->
+          <div class="carousel-item">
+            <div class="os-testimonial-row">
+              <div class="os-testimonial-card side d-none d-md-block">
+                <div class="os-testimonial-head">
+                  <div class="os-testimonial-user">
+                    <div>
+                      <h6 class="os-testimonial-name">Frances Hill</h6>
+                      <span class="os-testimonial-loc">San Francisco</span>
+                    </div>
+                  </div>
+                  <div class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                </div>
+                <p class="os-testimonial-text">From the itinerary to the little details, everything felt personal and well thought out. It&rsquo;s clear this team genuinely cares about giving travelers a great experience.</p>
+              </div>
+              <div class="os-testimonial-card center">
+                <div class="os-testimonial-head">
+                  <div class="os-testimonial-user">
+                    <div>
+                      <h6 class="os-testimonial-name">Jennth Norz</h6>
+                      <span class="os-testimonial-loc">New York City</span>
+                    </div>
+                  </div>
+                  <div class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                </div>
+                <p class="os-testimonial-text">Our whole trip was booked without a hitch and every detail matched what we were promised. The team stayed responsive the entire time and we felt looked after from start to finish.</p>
+              </div>
+              <div class="os-testimonial-card side d-none d-md-block">
+                <div class="os-testimonial-head">
+                  <div class="os-testimonial-user">
+                    <div>
+                      <h6 class="os-testimonial-name">David Doe</h6>
+                      <span class="os-testimonial-loc">Traveler</span>
+                    </div>
+                  </div>
+                  <div class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                </div>
+                <p class="os-testimonial-text">The tours on this site are fantastic &mdash; my family and I had a wonderful time. The team was professional and attentive throughout, and I&rsquo;ll definitely recommend them to my friends.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#osTestimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#osTestimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#osTestimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#osTestimonialCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer id="footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-3 col-md-6">
+        <img class="footer-logo" src="../assets/Images/Travora Footer2.png" alt="Travora Logo" />
+        <p>Your trusted partner for extraordinary travel experiences around the globe.</p>
+        <div class="dropdown mt-3">
+          <button class="currency-btn btn border rounded-2 fw-semibold d-flex align-items-center gap-1 dropdown-toggle" style="color: var(--tt-footer-text); border-color: rgba(255,255,255,0.15) !important;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-currency-dollar"></i> USD
+          </button>
+          <ul class="dropdown-menu border-0 shadow rounded-3 py-2">
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="USD"><i class="bi bi-currency-dollar me-1"></i>USD</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EUR"><i class="bi bi-currency-euro me-1"></i>EUR</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="GBP"><i class="bi bi-currency-pound me-1"></i>GBP</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EGP"><i class="bi bi-currency-exchange me-1"></i>EGP</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Contact</h5>
+        <p><i class="bi bi-telephone me-2 text-primary"></i>T: 1-634-567-34</p>
+        <p><i class="bi bi-envelope me-2 text-primary"></i>E: contact@traveltourtheme.co</p>
+        <div class="footer-social mt-3">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+          <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Useful Links</h5>
+        <ul class="footer-links">
+          <li><a href="blog.html">Travel Blog &amp; Tips</a></li>
+          <li><a href="about-us.html">Working With Us</a></li>
+          <li><a href="contact.html">Be Our Partner</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Pay Safely With Us</h5>
+        <p>The payment is encrypted and transmitted securely with an SSL protocol.</p>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="payment-icon"><i class="bi bi-credit-card-2-front"></i></span>
+          <span class="payment-icon"><i class="bi bi-credit-card"></i></span>
+          <span class="payment-icon"><i class="bi bi-paypal"></i></span>
+          <span class="payment-icon"><i class="bi bi-wallet2"></i></span>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+  </div>
+  <div class="footer-bottom">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <div>
+        <a href="../index.html">Home</a>
+        <a href="about-us.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="mb-0 text-muted">Copyright &copy; 2026 GoodLayers. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- UNIFIED AUTH MODAL -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg rounded-4">
+      <div class="modal-header border-bottom-0 pb-0">
+        <h5 class="modal-title neuton-bold fs-3" id="authModalLabel">Welcome to <span class="text-primary font-italic">Travora</span></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 p-md-5 pt-3">
+
+        <!-- Nav Tabs -->
+        <ul class="nav nav-pills nav-fill mb-4 bg-light rounded-pill p-1" id="authTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active rounded-pill fw-semibold" id="login-tab" data-bs-toggle="pill" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Login</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-pill fw-semibold" id="register-tab" data-bs-toggle="pill" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">Register</button>
+          </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="authTabContent">
+          <!-- Login Form -->
+          <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+            <form id="loginForm" novalidate>
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label fw-semibold text-dark auth-label-sm">Email Address <span class="text-primary">*</span></label>
+                <input type="email" class="form-control px-3 py-2" id="loginEmail" placeholder="you@example.com" required />
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label fw-semibold text-dark auth-label-sm">Password <span class="text-primary">*</span></label>
+                <input type="password" class="form-control px-3 py-2" id="loginPassword" placeholder="Enter your password" required />
+              </div>
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="rememberMe" />
+                  <label class="form-check-label text-muted auth-label-sm" for="rememberMe">Remember me</label>
+                </div>
+                <a href="#" class="text-primary text-decoration-none fw-medium auth-label-sm">Forgot password?</a>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 fw-semibold py-2 rounded-3">Login</button>
+            </form>
+          </div>
+
+          <!-- Register Form -->
+          <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+            <form id="registerForm" novalidate>
+              <div class="mb-3">
+                <label for="registerName" class="form-label fw-semibold text-dark auth-label-sm">Full Name <span class="text-primary">*</span></label>
+                <input type="text" class="form-control px-3 py-2" id="registerName" placeholder="John Doe" required />
+              </div>
+              <div class="mb-3">
+                <label for="registerEmail" class="form-label fw-semibold text-dark auth-label-sm">Email Address <span class="text-primary">*</span></label>
+                <input type="email" class="form-control px-3 py-2" id="registerEmail" placeholder="you@example.com" required />
+              </div>
+              <div class="mb-3">
+                <label for="registerPassword" class="form-label fw-semibold text-dark auth-label-sm">Password <span class="text-primary">*</span></label>
+                <input type="password" class="form-control px-3 py-2" id="registerPassword" placeholder="Min. 6 characters" required />
+              </div>
+              <div class="mb-4">
+                <label for="registerConfirmPassword" class="form-label fw-semibold text-dark auth-label-sm">Confirm Password <span class="text-primary">*</span></label>
+                <input type="password" class="form-control px-3 py-2" id="registerConfirmPassword" placeholder="Repeat your password" required />
+              </div>
+              <button type="submit" class="btn btn-primary w-100 fw-semibold py-2 rounded-3">Create Account</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- OUR SERVICE : VIDEO MODAL -->
+<div class="modal fade" id="osVideoModal" tabindex="-1" aria-labelledby="osVideoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-0 bg-transparent">
+      <button type="button" class="btn-close btn-close-white ms-auto mb-2" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="ratio ratio-16x9">
+        <iframe id="osVideoFrame" src="" title="Travora promo video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+<div class="toast-container-fixed"></div>
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

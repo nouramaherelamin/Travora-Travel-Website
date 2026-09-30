@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Travora - Data Pricing page." />
+  <title>Travora - Data Pricing</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/Images/plane.svg">
+  <link rel="stylesheet" href="../assets/CSS/bootstrap.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="../assets/CSS/Style.css" />
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== --> 
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar"> 
+  <div class="container py-2"> 
+    <a class="navbar-brand fw-bold fs-3 neuton-bold" href="../index.html"> 
+       <img class="footer-logo" src="../assets/Images/Travora Navbar.png" alt="Travora Logo" /> 
+    </a> 
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
+      <span class="navbar-toggler-icon"></span> 
+    </button> 
+    <div class="collapse navbar-collapse" id="navbarNav"> 
+      <ul class="navbar-nav mx-auto align-items-lg-center"> 
+        <li class="nav-item"><a class="nav-link fw-medium" href="../index.html" id="nav-home">Home</a></li> 
+        <li class="nav-item dropdown"> 
+          <a class="nav-link dropdown-toggle fw-medium" href="#" id="nav-pages" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a> 
+          <ul class="dropdown-menu" aria-labelledby="nav-pages"> 
+            <li><a class="dropdown-item" href="destinations.html">Destinations</a></li> 
+            <li><a class="dropdown-item" href="about-us.html">About Us</a></li> 
+            <li><a class="dropdown-item" href="our-service.html">Our Service</a></li> 
+            <li><a class="dropdown-item" href="contact.html">Contact</a></li> 
+            <li><a class="dropdown-item" href="gallery.html">Gallery</a></li> 
+            <li><a class="dropdown-item" href="price-table.html">Price Table</a></li> 
+          </ul> 
+        </li> 
+        <li class="nav-item dropdown"> 
+          <a class="nav-link dropdown-toggle active fw-medium" href="#" id="nav-tours" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tour List</a> 
+          <ul class="dropdown-menu" aria-labelledby="nav-tours"> 
+            <li><a class="dropdown-item" href="tour-grid.html">Tour Grid</a></li> 
+            <li><a class="dropdown-item" href="data-pricing.html">Date &amp; Pricing</a></li> 
+          </ul> 
+        </li> 
+        <li class="nav-item dropdown"> 
+          <a class="nav-link dropdown-toggle fw-medium" href="#" id="nav-rooms" role="button" data-bs-toggle="dropdown" aria-expanded="false">Room List</a> 
+          <ul class="dropdown-menu" aria-labelledby="nav-rooms"> 
+            <li><a class="dropdown-item" href="room-grid.html">Room Grid</a></li> 
+            <li><a class="dropdown-item" href="room-cart.html">Room Cart</a></li> 
+          </ul> 
+        </li> 
+        <li class="nav-item dropdown"> 
+          <a class="nav-link dropdown-toggle fw-medium" href="#" id="nav-search" role="button" data-bs-toggle="dropdown" aria-expanded="false">Search</a> 
+          <ul class="dropdown-menu" aria-labelledby="nav-search"> 
+            <li><a class="dropdown-item" href="tour-search.html">Tour Search</a></li> 
+            <li><a class="dropdown-item" href="room-search.html">Room Search</a></li> 
+          </ul> 
+        </li> 
+        <li class="nav-item"><a class="nav-link fw-medium" href="blog.html" id="nav-blog">Blog</a></li> 
+      </ul> 
+      <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0"> 
+        <div class="dropdown"> 
+          <button class="currency-btn btn bg-transparent border rounded-2 fw-semibold d-flex align-items-center gap-1 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"> 
+            <i class="bi bi-currency-dollar"></i> USD 
+          </button> 
+          <ul class="dropdown-menu dropdown-menu-end border-0 shadow rounded-3 py-2"> 
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="USD"><i class="bi bi-currency-dollar me-1"></i>USD</a></li> 
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EUR"><i class="bi bi-currency-euro me-1"></i>EUR</a></li> 
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="GBP"><i class="bi bi-currency-pound me-1"></i>GBP</a></li> 
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EGP"><i class="bi bi-currency-exchange me-1"></i>EGP</a></li> 
+          </ul> 
+        </div> 
+        <button class="btn btn-primary fw-semibold rounded-3 px-4" type="button" data-bs-toggle="modal" data-bs-target="#authModal">Login</button> 
+      </div> 
+    </div> 
+  </div> 
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-hero">
+
+  <div class="container">
+
+    <h1 class="neuton-bold" id="pricingHeroTitle">
+      Date &amp; Pricing
+    </h1>
+
+    <nav aria-label="breadcrumb" class="mt-2">
+
+      <ol class="breadcrumb justify-content-center mb-0">
+
+        <li class="breadcrumb-item">
+          <a href="../index.html">Home</a>
+        </li>
+
+        <li class="breadcrumb-item">
+          <a href="tour-grid.html">Tour List</a>
+        </li>
+
+        <li
+          class="breadcrumb-item active"
+          aria-current="page"
+          id="pricingBreadcrumbActive"
+        >
+          Date &amp; Pricing
+        </li>
+
+      </ol>
+
+    </nav>
+
+  </div>
+
+</div>
+
+
+<!-- DATA & PRICING -->
+
+<section class="data-pricing-section">
+
+  <div class="container">
+
+    <div class="row g-5">
+
+      <!-- LEFT -->
+
+      <div class="col-lg-8">
+
+        <!-- TOUR IMAGE -->
+
+        <div class="pricing-tour-gallery mb-4">
+
+          <img
+            src="../assets/Images/Tour Africa Amazing African Safari.jpg"
+            alt="Tour"
+            class="pricing-main-img"
+            id="pricingTourImg"
+          />
+
+        </div>
+
+
+        <!-- TOUR TITLE -->
+
+        <h2 class="neuton-bold mb-2" id="pricingTourTitle">
+          Africa
+        </h2>
+
+        <p class="pricing-subtitle" id="pricingTourSubtitle">
+          Amazing African Safari
+        </p>
+
+
+        <!-- RATING -->
+
+        <div class="star-rating mb-3">
+
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+
+          <small class="text-muted ms-1" id="pricingReviewCount">
+            1 Review
+          </small>
+
+        </div>
+
+
+        <!-- TOUR INFO -->
+
+        <div class="d-flex flex-wrap gap-3 mb-4">
+
+          <span class="tour-info-badge">
+            <i class="bi bi-clock"></i>
+            <span id="pricingDuration">5 Hours</span>
+          </span>
+
+          <span class="tour-info-badge">
+            <i class="bi bi-people"></i>
+            Max 12 Guests
+          </span>
+
+          <span class="tour-info-badge">
+            <i class="bi bi-wifi"></i>
+            Free WiFi
+          </span>
+
+          <span class="tour-info-badge">
+            <i class="bi bi-person"></i>
+            Ages 18-65
+          </span>
+
+        </div>
+
+
+        <!-- DATE & PRICING -->
+
+        <div class="pricing-content-section">
+
+          <h3>Date &amp; Pricing</h3>
+
+          <p class="text-muted">
+            Select your preferred date and check the available pricing
+            for this tour.
+          </p>
+
+          <div class="table-responsive pricing-table-wrapper">
+
+            <table class="table pricing-table align-middle">
+
+              <thead>
+
+                <tr>
+                  <th>Date</th>
+                  <th>Duration</th>
+                  <th>Price</th>
+                  <th>Availability</th>
+                </tr>
+
+              </thead>
+
+              <tbody>
+
+                <tr>
+
+                  <td>
+                    <i class="bi bi-calendar3 me-2"></i>
+                    Available on request
+                  </td>
+
+                  <td id="tableDuration">
+                    5 Hours
+                  </td>
+
+                  <td>
+                    <strong id="tablePrice" data-price-usd="100">
+                      $100
+                    </strong>
+                  </td>
+
+                  <td>
+                    <span class="availability-badge">
+                      Available
+                    </span>
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+
+        <!-- PRICE INFORMATION -->
+
+        <div class="pricing-content-section">
+
+          <h3>Price Information</h3>
+
+          <div class="price-information-box">
+
+            <div class="price-info-row">
+
+              <span>
+                <i class="bi bi-check-circle-fill"></i>
+                Tour price
+              </span>
+
+              <strong id="infoTourPrice" data-price-usd="100">
+                $100
+              </strong>
+
+            </div>
+
+            <div class="price-info-row">
+
+              <span>
+                <i class="bi bi-check-circle-fill"></i>
+                Duration
+              </span>
+
+              <strong id="infoDuration">
+                5 Hours
+              </strong>
+
+            </div>
+
+            <div class="price-info-row">
+
+              <span>
+                <i class="bi bi-check-circle-fill"></i>
+                Maximum guests
+              </span>
+
+              <strong>
+                12 Guests
+              </strong>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- PRICE INCLUDES -->
+
+        <div class="pricing-content-section">
+
+          <h3>Price Includes</h3>
+
+          <ul class="includes-list">
+
+            <li>
+              <i class="bi bi-check-circle-fill"></i>
+              Professional tour guide
+            </li>
+
+            <li>
+              <i class="bi bi-check-circle-fill"></i>
+              Transportation during the tour
+            </li>
+
+            <li>
+              <i class="bi bi-check-circle-fill"></i>
+              Hotel accommodation according to the tour
+            </li>
+
+            <li>
+              <i class="bi bi-check-circle-fill"></i>
+              Selected activities
+            </li>
+
+            <li>
+              <i class="bi bi-check-circle-fill"></i>
+              Travel assistance
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- PRICE EXCLUDES -->
+
+        <div class="pricing-content-section">
+
+          <h3>Price Excludes</h3>
+
+          <ul class="excludes-list">
+
+            <li>
+              <i class="bi bi-x-circle-fill"></i>
+              International flights
+            </li>
+
+            <li>
+              <i class="bi bi-x-circle-fill"></i>
+              Personal expenses
+            </li>
+
+            <li>
+              <i class="bi bi-x-circle-fill"></i>
+              Tips and gratuities
+            </li>
+
+            <li>
+              <i class="bi bi-x-circle-fill"></i>
+              Additional activities
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- CANCELLATION -->
+
+        <div class="pricing-content-section">
+
+          <h3>Cancellation Policy</h3>
+
+          <p>
+            Free cancellation is available up to 30 days before
+            the scheduled tour date. Please contact us for more
+            information about cancellation and refund policies.
+          </p>
+
+        </div>
+
+
+        <!-- FAQ -->
+
+        <div class="pricing-content-section">
+
+          <h3>FAQ</h3>
+
+          <div class="accordion" id="pricingFaq">
+
+            <div class="faq-item">
+
+              <h2 class="accordion-header">
+
+                <button
+                  class="accordion-button faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#pricingFaq1"
+                >
+                  How can I choose my tour date?
+                </button>
+
+              </h2>
+
+              <div
+                id="pricingFaq1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#pricingFaq"
+              >
+
+                <div class="faq-body">
+                  You can select your preferred date from the
+                  booking form on the right side of the page.
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+              <h2 class="accordion-header">
+
+                <button
+                  class="accordion-button faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#pricingFaq2"
+                >
+                  Is the price per person?
+                </button>
+
+              </h2>
+
+              <div
+                id="pricingFaq2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#pricingFaq"
+              >
+
+                <div class="faq-body">
+                  Yes. The displayed tour price is calculated
+                  per person unless otherwise stated.
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+              <h2 class="accordion-header">
+
+                <button
+                  class="accordion-button faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#pricingFaq3"
+                >
+                  Can I book for more than one person?
+                </button>
+
+              </h2>
+
+              <div
+                id="pricingFaq3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#pricingFaq"
+              >
+
+                <div class="faq-body">
+                  Yes. You can select the number of people from
+                  the booking form.
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+              <h2 class="accordion-header">
+
+                <button
+                  class="accordion-button faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#pricingFaq4"
+                >
+                  Is cancellation available?
+                </button>
+
+              </h2>
+
+              <div
+                id="pricingFaq4"
+                class="accordion-collapse collapse"
+                data-bs-parent="#pricingFaq"
+              >
+
+                <div class="faq-body">
+                  Yes. Free cancellation is available up to
+                  30 days before the tour date.
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT : BOOKING CARD -->
+
+      <div class="col-lg-4">
+
+        <div class="booking-card">
+
+          <div class="text-center mb-3">
+
+            <span class="booking-price" id="bookingPrice" data-price-usd="100">
+              $100
+            </span>
+
+            <p class="small text-muted mt-1">
+              per person
+            </p>
+
+          </div>
+
+          <hr />
+
+          <form id="pricingBookingForm" novalidate>
+
+            <!-- DATE -->
+
+            <div class="mb-3">
+
+              <label class="form-label fw-semibold small">
+                Date
+                <span class="text-primary">*</span>
+              </label>
+
+              <input
+                type="date"
+                class="form-control"
+                id="pricingBookingDate"
+                required
+              />
+
+            </div>
+
+
+            <!-- PEOPLE -->
+
+            <div class="mb-3">
+
+              <label class="form-label fw-semibold small">
+                Number of People
+                <span class="text-primary">*</span>
+              </label>
+
+              <select
+                class="form-select"
+                id="pricingBookingPeople"
+                required
+              >
+
+                <option value="">Select</option>
+                <option value="1">1 Person</option>
+                <option value="2">2 People</option>
+                <option value="3">3 People</option>
+                <option value="4">4 People</option>
+                <option value="5">5 People</option>
+                <option value="6">6+ People</option>
+
+              </select>
+
+            </div>
+
+
+            <!-- NAME -->
+
+            <div class="mb-3">
+
+              <label class="form-label fw-semibold small">
+                Full Name
+                <span class="text-primary">*</span>
+              </label>
+
+              <input
+                type="text"
+                class="form-control"
+                id="pricingBookingName"
+                placeholder="John Doe"
+                required
+              />
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="mb-3">
+
+              <label class="form-label fw-semibold small">
+                Email
+                <span class="text-primary">*</span>
+              </label>
+
+              <input
+                type="email"
+                class="form-control"
+                id="pricingBookingEmail"
+                placeholder="you@example.com"
+                required
+              />
+
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-primary w-100 fw-semibold py-2 rounded-3 mt-3"
+            >
+              <i class="bi bi-calendar-check me-2"></i>
+              Book Now
+            </button>
+
+          </form>
+
+          <hr />
+
+          <div class="text-center">
+
+            <p class="small text-muted mb-1">
+              <i class="bi bi-shield-check text-primary me-1"></i>
+              Secure Booking
+            </p>
+
+            <p class="small text-muted mb-0">
+              <i class="bi bi-arrow-counterclockwise text-primary me-1"></i>
+              Free Cancellation (30 days)
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer id="footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-3 col-md-6">
+        <img class="footer-logo" src="../assets/Images/Travora Footer2.png" alt="Travora Logo" />
+        <p>Your trusted partner for extraordinary travel experiences around the globe.</p>
+        <div class="dropdown mt-3">
+          <button class="currency-btn btn border rounded-2 fw-semibold d-flex align-items-center gap-1 dropdown-toggle" style="color: var(--tt-footer-text); border-color: rgba(255,255,255,0.15) !important;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-currency-dollar"></i> USD
+          </button>
+          <ul class="dropdown-menu border-0 shadow rounded-3 py-2">
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="USD"><i class="bi bi-currency-dollar me-1"></i>USD</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EUR"><i class="bi bi-currency-euro me-1"></i>EUR</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="GBP"><i class="bi bi-currency-pound me-1"></i>GBP</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EGP"><i class="bi bi-currency-exchange me-1"></i>EGP</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Contact</h5>
+        <p><i class="bi bi-telephone me-2 text-primary"></i>T: 1-634-567-34</p>
+        <p><i class="bi bi-envelope me-2 text-primary"></i>E: contact@traveltourtheme.co</p>
+        <div class="footer-social mt-3">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+          <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Useful Links</h5>
+        <ul class="footer-links">
+          <li><a href="blog.html">Travel Blog &amp; Tips</a></li>
+          <li><a href="about-us.html">Working With Us</a></li>
+          <li><a href="contact.html">Be Our Partner</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Pay Safely With Us</h5>
+        <p>The payment is encrypted and transmitted securely with an SSL protocol.</p>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="payment-icon"><i class="bi bi-credit-card-2-front"></i></span>
+          <span class="payment-icon"><i class="bi bi-credit-card"></i></span>
+          <span class="payment-icon"><i class="bi bi-paypal"></i></span>
+          <span class="payment-icon"><i class="bi bi-wallet2"></i></span>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+  </div>
+  <div class="footer-bottom">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <div>
+        <a href="../index.html">Home</a>
+        <a href="about-us.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="mb-0 text-muted">Copyright &copy; 2026 GoodLayers. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- UNIFIED AUTH MODAL -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg rounded-4">
+      <div class="modal-header border-bottom-0 pb-0">
+        <h5 class="modal-title neuton-bold fs-3" id="authModalLabel">Welcome to <span class="text-primary font-italic">Travora</span></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 p-md-5 pt-3">
+        
+        <!-- Nav Tabs -->
+        <ul class="nav nav-pills nav-fill mb-4 bg-light rounded-pill p-1" id="authTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active rounded-pill fw-semibold" id="login-tab" data-bs-toggle="pill" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Login</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-pill fw-semibold" id="register-tab" data-bs-toggle="pill" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">Register</button>
+          </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="authTabContent">
+          <!-- Login Form -->
+          <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+            <form id="loginForm" novalidate>
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label fw-semibold text-dark auth-label-sm">Email Address <span class="text-primary">*</span></label>
+                <input type="email" class="form-control px-3 py-2" id="loginEmail" placeholder="you@example.com" required />
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label fw-semibold text-dark auth-label-sm">Password <span class="text-primary">*</span></label>
+                <input type="password" class="form-control px-3 py-2" id="loginPassword" placeholder="Enter your password" required />
+              </div>
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="rememberMe" />
+                  <label class="form-check-label text-muted auth-label-sm" for="rememberMe">Remember me</label>
+                </div>
+                <a href="#" class="text-primary text-decoration-none fw-medium auth-label-sm">Forgot password?</a>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 fw-semibold py-2 rounded-3">Login</button>
+            </form>
+          </div>
+
+          <!-- Register Form -->
+          <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+            <form id="registerForm" novalidate>
+              <div class="mb-3">
+                <label for="registerName" class="form-label fw-semibold text-dark auth-label-sm">Full Name <span class="text-primary">*</span></label>
+                <input type="text" class="form-control px-3 py-2" id="registerName" placeholder="John Doe" required />
+              </div>
+              <div class="mb-3">
+                <label for="registerEmail" class="form-label fw-semibold text-dark auth-label-sm">Email Address <span class="text-primary">*</span></label>
+                <input type="email" class="form-control px-3 py-2" id="registerEmail" placeholder="you@example.com" required />
+              </div>
+              <div class="mb-3">
+                <label for="registerPassword" class="form-label fw-semibold text-dark auth-label-sm">Password <span class="text-primary">*</span></label>
+                <input type="password" class="form-control px-3 py-2" id="registerPassword" placeholder="Min. 6 characters" required />
+              </div>
+              <div class="mb-4">
+                <label for="registerConfirmPassword" class="form-label fw-semibold text-dark auth-label-sm">Confirm Password <span class="text-primary">*</span></label>
+                <input type="password" class="form-control px-3 py-2" id="registerConfirmPassword" placeholder="Repeat your password" required />
+              </div>
+              <button type="submit" class="btn btn-primary w-100 fw-semibold py-2 rounded-3">Create Account</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+<div class="toast-container-fixed"></div>
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

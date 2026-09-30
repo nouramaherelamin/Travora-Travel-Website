@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Travora - Tour Search page." name="description"/>
+<title>Travora - Tour Search</title>
+<link href="../assets/Images/plane.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/CSS/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<link href="../assets/CSS/Style.css" rel="stylesheet"/>
+</link></head>
+<body>
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
+<div class="container py-2">
+<a class="navbar-brand fw-bold fs-3 neuton-bold" href="../index.html">
+<img alt="Travora Logo" class="footer-logo" src="../assets/Images/Travora%20Navbar.png"/>
+</a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler border-0 shadow-none" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav mx-auto align-items-lg-center">
+<li class="nav-item"><a class="nav-link fw-medium" href="../index.html" id="nav-home">Home</a></li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle fw-medium" data-bs-toggle="dropdown" href="#" id="nav-pages" role="button">Pages</a>
+<ul aria-labelledby="nav-pages" class="dropdown-menu">
+<li><a class="dropdown-item" href="destinations.html">Destinations</a></li>
+<li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+<li><a class="dropdown-item" href="our-service.html">Our Service</a></li>
+<li><a class="dropdown-item" href="contact.html">Contact</a></li>
+<li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+<li><a class="dropdown-item" href="price-table.html">Price Table</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle fw-medium" data-bs-toggle="dropdown" href="#" id="nav-tours" role="button">Tour List</a>
+<ul aria-labelledby="nav-tours" class="dropdown-menu">
+<li><a class="dropdown-item" href="tour-grid.html">Tour Grid</a></li>
+<li><a class="dropdown-item" href="data-pricing.html">Date &amp; Pricing</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle fw-medium" data-bs-toggle="dropdown" href="#" id="nav-rooms" role="button">Room List</a>
+<ul aria-labelledby="nav-rooms" class="dropdown-menu">
+<li><a class="dropdown-item" href="room-grid.html">Room Grid</a></li>
+<li><a class="dropdown-item" href="room-cart.html">Room Cart</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle active fw-medium" data-bs-toggle="dropdown" href="#" id="nav-search" role="button">Search</a>
+<ul aria-labelledby="nav-search" class="dropdown-menu">
+<li><a class="dropdown-item active" href="tour-search.html">Tour Search</a></li>
+<li><a class="dropdown-item" href="room-search.html">Room Search</a></li>
+</ul>
+</li>
+<li class="nav-item"><a class="nav-link fw-medium" href="blog.html" id="nav-blog">Blog</a></li>
+</ul>
+<div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+<div class="dropdown">
+<button aria-expanded="false" class="currency-btn btn bg-transparent border rounded-2 fw-semibold d-flex align-items-center gap-1 dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="bi bi-currency-dollar"></i> USD 
+          </button>
+<ul class="dropdown-menu dropdown-menu-end border-0 shadow rounded-3 py-2">
+<li><a class="dropdown-item fw-semibold" data-currency="USD" href="#"><i class="bi bi-currency-dollar me-1"></i>USD</a></li>
+<li><a class="dropdown-item fw-semibold" data-currency="EUR" href="#"><i class="bi bi-currency-euro me-1"></i>EUR</a></li>
+<li><a class="dropdown-item fw-semibold" data-currency="GBP" href="#"><i class="bi bi-currency-pound me-1"></i>GBP</a></li>
+<li><a class="dropdown-item fw-semibold" data-currency="EGP" href="#"><i class="bi bi-currency-exchange me-1"></i>EGP</a></li>
+</ul>
+</div>
+<button class="btn btn-primary fw-semibold rounded-3 px-4" data-bs-target="#authModal" data-bs-toggle="modal" type="button">Login</button>
+</div>
+</div>
+</div>
+</nav>
+<!-- PAGE HERO -->
+<section class="page-hero">
+<div class="container">
+<h1>Tour Search</h1>
+</div>
+</section>
+<!-- MAIN SECTION -->
+<section class="room-section">
+<div class="container">
+<!-- TOP SEARCH BAR -->
+<div class="card shadow-sm border-0 mb-4">
+<div class="card-body p-4">
+<div class="row g-3">
+<div class="col-md-4">
+<label class="form-label fw-semibold">Destination</label>
+<select class="form-select" id="tsTopDestination">
+<option value="">Any Destination</option>
+<option value="western-europe">Western Europe</option>
+<option value="south-africa">South Africa</option>
+<option value="scandinavia">Scandinavia</option>
+<option value="egypt">Egypt</option>
+<option value="asia">Asia</option>
+<option value="america">America</option>
+</select>
+</div>
+<div class="col-md-4">
+<label class="form-label fw-semibold">Tour Type</label>
+<select class="form-select" id="tsTopType">
+<option value="">Any Type</option>
+<option value="adventure">Adventure</option>
+<option value="city">City Tour</option>
+<option value="luxury">Luxury</option>
+<option value="beach">Beach</option>
+</select>
+</div>
+<div class="col-md-4 d-flex align-items-end">
+<button class="btn btn-primary w-100 fw-semibold py-2" id="tsTopSearchBtn">
+<i class="bi bi-search me-2"></i> Search
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="row g-5">
+<!-- SIDEBAR -->
+<div class="col-lg-3">
+<div class="card shadow-sm border-0 p-3 mb-4">
+<h5 class="neuton-bold mb-3 border-bottom pb-2">Filter By</h5>
+<div class="mb-3">
+<label class="form-label fw-semibold">Destination</label>
+<select class="form-select" id="tsFilterDest">
+<option value="">All Destinations</option>
+<option value="western-europe">Western Europe</option>
+<option value="south-africa">South Africa</option>
+<option value="scandinavia">Scandinavia</option>
+<option value="egypt">Egypt</option>
+<option value="asia">Asia</option>
+<option value="america">America</option>
+</select>
+</div>
+<div class="mb-3">
+<label class="form-label fw-semibold">Duration</label>
+<select class="form-select" id="tsFilterDuration">
+<option value="">Any Duration</option>
+<option value="1-3">1 - 3 Days</option>
+<option value="4-7">4 - 7 Days</option>
+<option value="8-14">8 - 14 Days</option>
+<option value="15+">15+ Days</option>
+</select>
+</div>
+<div class="mb-3">
+<label class="form-label fw-semibold">Tour Type</label>
+<select class="form-select" id="tsFilterType">
+<option value="">All Types</option>
+<option value="adventure">Adventure</option>
+<option value="city">City Tour</option>
+<option value="luxury">Luxury</option>
+<option value="beach">Beach</option>
+</select>
+</div>
+<div class="mb-4">
+<label class="form-label fw-semibold d-flex justify-content-between">
+                  Max Price
+                  <span class="text-primary fw-bold" id="tsPriceLabel">$5,000</span>
+</label>
+<input class="form-range" id="tsFilterPrice" max="5000" min="50" step="50" type="range" value="5000"/>
+</div>
+<div class="mb-4">
+<label class="form-label fw-semibold">Minimum Rating</label>
+<div class="d-flex flex-column gap-2">
+<div class="form-check">
+<input class="form-check-input" id="tsRat5" name="tsRating" type="radio" value="5"/>
+<label class="form-check-label text-warning" for="tsRat5">
+<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" id="tsRat4" name="tsRating" type="radio" value="4"/>
+<label class="form-check-label text-warning" for="tsRat4">
+<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" id="tsRat3" name="tsRating" type="radio" value="3"/>
+<label class="form-check-label text-warning" for="tsRat3">
+<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
+</label>
+</div>
+<div class="form-check">
+<input checked="" class="form-check-input" id="tsRat0" name="tsRating" type="radio" value="0"/>
+<label class="form-check-label" for="tsRat0">Any Rating</label>
+</div>
+</div>
+</div>
+<div class="mb-4">
+<label class="form-label fw-semibold">Features</label>
+<div class="d-flex flex-column gap-2">
+<div class="form-check">
+<input class="form-check-input ts-feat-check" id="tsFeat1" type="checkbox" value="guide"/>
+<label class="form-check-label" for="tsFeat1">Local Guide</label>
+</div>
+<div class="form-check">
+<input class="form-check-input ts-feat-check" id="tsFeat2" type="checkbox" value="meals"/>
+<label class="form-check-label" for="tsFeat2">Meals Included</label>
+</div>
+<div class="form-check">
+<input class="form-check-input ts-feat-check" id="tsFeat3" type="checkbox" value="transfers"/>
+<label class="form-check-label" for="tsFeat3">Transfers</label>
+</div>
+</div>
+</div>
+<button class="btn btn-primary w-100 fw-semibold mb-2" id="tsApplyBtn">Apply Filters</button>
+<button class="btn btn-outline-secondary w-100 fw-semibold" id="tsResetBtn">Reset</button>
+</div>
+</div>
+<!-- RESULTS -->
+<div class="col-lg-9">
+<div class="d-flex flex-wrap justify-content-between align-items-center mb-4 p-3 bg-light rounded shadow-sm">
+<div class="mb-2 mb-md-0 fw-semibold">
+                Showing <span class="text-primary" id="tsResultCount">0</span> Tours
+              </div>
+<div class="d-flex align-items-center gap-2">
+<label class="form-label mb-0 fw-semibold text-nowrap" for="tsSortSelect">Sort by:</label>
+<select class="form-select w-auto" id="tsSortSelect">
+<option value="popularity">Popularity</option>
+<option value="price-asc">Price (Low to High)</option>
+<option value="price-desc">Price (High to Low)</option>
+<option value="rating-desc">Rating (High to Low)</option>
+<option value="duration-asc">Duration (Short to Long)</option>
+</select>
+</div>
+</div>
+<!-- No Results -->
+<div class="text-center py-5 d-none bg-light rounded shadow-sm" id="tsNoResults">
+<i class="bi bi-search text-muted fs-1 mb-3 d-block"></i>
+<h4 class="neuton-bold">No Tours Found</h4>
+<p class="text-muted">We couldn't find any tours matching your criteria.</p>
+<button class="btn btn-primary mt-2" id="tsNoResultsReset">Clear Filters</button>
+</div>
+<div class="row g-4" id="tsCardsContainer">
+<!-- Tour 1 -->
+<div class="col-lg-6 col-md-6 col-12 ts-card" data-dest="south-africa" data-duration-days="6" data-features="guide,meals,transfers" data-popularity="90" data-price-usd="1500" data-rating="5" data-type="adventure"><div class="room-card h-100">
+<div class="room-image">
+<a href="tour-details.html?tour=africa-safari">
+<img alt="Amazing African Safari" class="card-img-top" loading="lazy" src="../assets/Images/Tour%20Africa%20Amazing%20African%20Safari.jpg"/>
+</a>
+<span class="price-roomgrid">From <span class="tour-price-value" data-price-usd="1500">$1,500</span></span>
+</div>
+<h2>Africa</h2>
+<p>Amazing Safari</p>
+<div class="rating review-stars text-warning mb-3">
+<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+<span>(5 Reviews)</span>
+</div>
+<p class="tour-time"><i class="bi bi-clock text-primary"></i> 6 Days</p>
+<a class="book-now" href="tour-details.html?tour=africa-safari">BOOK NOW <span>➔</span></a>
+</div></div>
+<!-- Tour 2 -->
+<div class="col-lg-6 col-md-6 col-12 ts-card" data-dest="asia" data-duration-days="5" data-features="guide,transfers" data-popularity="95" data-price-usd="3200" data-rating="5" data-type="luxury,city"><div class="room-card h-100">
+<div class="room-image">
+<a href="tour-details.html?tour=dubai">
+<img alt="Dubai All Stunning Places" class="card-img-top" loading="lazy" src="../assets/Images/Tour%20Dubai%20All%20Stunning%20Places.jpg"/>
+</a>
+<span class="price-roomgrid">From <span class="tour-price-value" data-price-usd="3200">$3,200</span></span>
+</div>
+<h2>Dubai</h2>
+<p>All Stunning Places</p>
+<div class="rating review-stars text-warning mb-3">
+<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+<span>(12 Reviews)</span>
+</div>
+<p class="tour-time"><i class="bi bi-clock text-primary"></i> 5 Days</p>
+<a class="book-now" href="tour-details.html?tour=dubai">BOOK NOW <span>➔</span></a>
+</div></div>
+<!-- Tour 3 -->
+<div class="col-lg-6 col-md-6 col-12 ts-card" data-dest="western-europe" data-duration-days="9" data-features="guide" data-popularity="85" data-price-usd="3100" data-rating="4" data-type="city"><div class="room-card h-100">
+<div class="room-image">
+<a href="tour-details.html?tour=venice-rome-milan">
+<img alt="Venice Rome and Milan" class="card-img-top" loading="lazy" src="../assets/Images/Tour%20Venice%20Rome%20and%20Milan%209%20Days.jpg"/>
+</a>
+<span class="price-roomgrid">From <span class="tour-price-value" data-price-usd="3100">$3,100</span></span>
+</div>
+<h2>Venice, Rome and Milan</h2>
+<p>9 Days</p>
+<div class="rating review-stars text-warning mb-3">
+<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+<span>(8 Reviews)</span>
+</div>
+<p class="tour-time"><i class="bi bi-clock text-primary"></i> 9 Days</p>
+<a class="book-now" href="tour-details.html?tour=venice-rome-milan">BOOK NOW <span>➔</span></a>
+</div></div>
+<!-- Tour 4 -->
+<div class="col-lg-6 col-md-6 col-12 ts-card" data-dest="western-europe" data-duration-days="6" data-features="guide,meals" data-popularity="88" data-price-usd="1900" data-rating="5" data-type="city"><div class="room-card h-100">
+<div class="room-image">
+<a href="tour-details.html?tour=paris">
+<img alt="Paris" class="card-img-top" loading="lazy" src="../assets/Images/Tour%20Pais%20Eiffel%20Tower%20Notre%20Dame%20Cath.jpg"/>
+</a>
+<span class="price-roomgrid">From <span class="tour-price-value" data-price-usd="1900">$1,900</span></span>
+</div>
+<h2>Paris</h2>
+<p>Enjoy Paris 6 Days</p>
+<div class="rating review-stars text-warning mb-3">
+<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+<span>(15 Reviews)</span>
+</div>
+<p class="tour-time"><i class="bi bi-clock text-primary"></i> 6 Days</p>
+<a class="book-now" href="tour-details.html?tour=paris">BOOK NOW <span>➔</span></a>
+</div></div>
+<!-- Tour 5 -->
+<div class="col-lg-6 col-md-6 col-12 ts-card" data-dest="america" data-duration-days="5" data-features="meals,transfers" data-popularity="75" data-price-usd="1900" data-rating="4" data-type="beach,luxury"><div class="room-card h-100">
+<div class="room-image">
+<a href="tour-details.html?tour=oahu">
+<img alt="Oahu" class="card-img-top" loading="lazy" src="../assets/Images/Tour%205Day%20Oahu%20Tour%20Honolulu.jpg"/>
+</a>
+<span class="price-roomgrid">From <span class="tour-price-value" data-price-usd="1900">$1,900</span></span>
+</div>
+<h2>Oahu</h2>
+<p>5 Days Honolulu</p>
+<div class="rating review-stars text-warning mb-3">
+<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+<span>(4 Reviews)</span>
+</div>
+<p class="tour-time"><i class="bi bi-clock text-primary"></i> 5 Days</p>
+<a class="book-now" href="tour-details.html?tour=oahu">BOOK NOW <span>➔</span></a>
+</div></div>
+<!-- Tour 6 -->
+<div class="col-lg-6 col-md-6 col-12 ts-card" data-dest="america" data-duration-days="1" data-features="guide" data-popularity="80" data-price-usd="1000" data-rating="5" data-type="adventure,beach"><div class="room-card h-100">
+<div class="room-image">
+<a href="tour-details.html?tour=molokini">
+<img alt="Molokini" class="card-img-top" loading="lazy" src="../assets/Images/Tour%20Molokini%20and%20Turtle%20Snorkeling.jpg"/>
+</a>
+<span class="price-roomgrid">From <span class="tour-price-value" data-price-usd="1000">$1,000</span></span>
+</div>
+<h2>Molokini</h2>
+<p>Turtle Snorkeling</p>
+<div class="rating review-stars text-warning mb-3">
+<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+<span>(22 Reviews)</span>
+</div>
+<p class="tour-time"><i class="bi bi-clock text-primary"></i> 1 Day</p>
+<a class="book-now" href="tour-details.html?tour=molokini">BOOK NOW <span>➔</span></a>
+</div></div>
+<!-- Tour 7 -->
+<div class="col-lg-6 col-md-6 col-12 ts-card" data-dest="scandinavia" data-duration-days="7" data-features="guide,transfers" data-popularity="65" data-price-usd="1500" data-rating="4" data-type="city"><div class="room-card h-100">
+<div class="room-image">
+<a href="tour-details.html?tour=moscow">
+<img alt="Moscow" class="card-img-top" loading="lazy" src="../assets/Images/Tour%20Two%20Moscow%20Tour%20of%207days.jpg"/>
+</a>
+<span class="price-roomgrid">From <span class="tour-price-value" data-price-usd="1500">$1,500</span></span>
+</div>
+<h2>Moscow</h2>
+<p>Two Moscow Tour of 7 Days</p>
+<div class="rating review-stars text-warning mb-3">
+<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+<span>(3 Reviews)</span>
+</div>
+<p class="tour-time"><i class="bi bi-clock text-primary"></i> 7 Days</p>
+<a class="book-now" href="tour-details.html?tour=moscow">BOOK NOW <span>➔</span></a>
+</div></div>
+<!-- Tour 8 -->
+<div class="col-lg-6 col-md-6 col-12 ts-card" data-dest="western-europe" data-duration-days="6" data-features="guide,meals" data-popularity="92" data-price-usd="2100" data-rating="5" data-type="city"><div class="room-card h-100">
+<div class="room-image">
+<a href="tour-details.html?tour=austria">
+<img alt="Austria" class="card-img-top" loading="lazy" src="../assets/Images/Tour%20Austria%206Days%20in%20Vienna%20Hallstatt.jpg"/>
+</a>
+<span class="price-roomgrid">From <span class="tour-price-value" data-price-usd="2100">$2,100</span></span>
+</div>
+<h2>Austria</h2>
+<p>6 Days in Vienna, Hallstatt</p>
+<div class="rating review-stars text-warning mb-3">
+<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+<span>(18 Reviews)</span>
+</div>
+<p class="tour-time"><i class="bi bi-clock text-primary"></i> 6 Days</p>
+<a class="book-now" href="tour-details.html?tour=austria">BOOK NOW <span>➔</span></a>
+</div></div>
+<!-- Tour 9 -->
+<div class="col-lg-6 col-md-6 col-12 ts-card" data-dest="egypt" data-duration-days="5" data-features="guide,transfers" data-popularity="86" data-price-usd="1300" data-rating="4" data-type="adventure,city"><div class="room-card h-100">
+<div class="room-image">
+<a href="tour-details.html?tour=egypt-pyramids">
+<img alt="Egypt" class="card-img-top" loading="lazy" src="../assets/Images/Destinations%20Egypt.png"/>
+</a>
+<span class="price-roomgrid">From <span class="tour-price-value" data-price-usd="1300">$1,300</span></span>
+</div>
+<h2>Egypt</h2>
+<p>Pyramids Tour</p>
+<div class="rating review-stars text-warning mb-3">
+<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+<span>(9 Reviews)</span>
+</div>
+<p class="tour-time"><i class="bi bi-clock text-primary"></i> 5 Days</p>
+<a class="book-now" href="tour-details.html?tour=egypt-pyramids">BOOK NOW <span>➔</span></a>
+</div></div>
+<!-- Tour 10 -->
+<div class="col-lg-6 col-md-6 col-12 ts-card" data-dest="asia" data-duration-days="8" data-features="meals" data-popularity="72" data-price-usd="1100" data-rating="4" data-type="city"><div class="room-card h-100">
+<div class="room-image">
+<a href="tour-details.html?tour=india">
+<img alt="India" class="card-img-top" loading="lazy" src="../assets/Images/TT%20India%20Mumbai%20New%20Delhi.png"/>
+</a>
+<span class="price-roomgrid">From <span class="tour-price-value" data-price-usd="1100">$1,100</span></span>
+</div>
+<h2>India</h2>
+<p>Mumbai &amp; New Delhi</p>
+<div class="rating review-stars text-warning mb-3">
+<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+<span>(5 Reviews)</span>
+</div>
+<p class="tour-time"><i class="bi bi-clock text-primary"></i> 8 Days</p>
+<a class="book-now" href="tour-details.html?tour=india">BOOK NOW <span>➔</span></a>
+</div></div>
+<!-- Tour 11 -->
+<div class="col-lg-6 col-md-6 col-12 ts-card" data-dest="america" data-duration-days="10" data-features="guide,transfers" data-popularity="89" data-price-usd="2500" data-rating="5" data-type="adventure"><div class="room-card h-100">
+<div class="room-image">
+<a href="tour-details.html?tour=grand-canyon">
+<img alt="Grand Canyon" class="card-img-top" loading="lazy" src="../assets/Images/TT%20America%20Grand%20canyon%20Golden%20Gate.png"/>
+</a>
+<span class="price-roomgrid">From <span class="tour-price-value" data-price-usd="2500">$2,500</span></span>
+</div>
+<h2>America</h2>
+<p>Grand Canyon &amp; Golden Gate</p>
+<div class="rating review-stars text-warning mb-3">
+<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+<span>(14 Reviews)</span>
+</div>
+<p class="tour-time"><i class="bi bi-clock text-primary"></i> 10 Days</p>
+<a class="book-now" href="tour-details.html?tour=grand-canyon">BOOK NOW <span>➔</span></a>
+</div></div>
+<!-- Tour 12 -->
+<div class="col-lg-6 col-md-6 col-12 ts-card" data-dest="scandinavia" data-duration-days="9" data-features="meals,guide" data-popularity="83" data-price-usd="2500" data-rating="5" data-type="city,luxury"><div class="room-card h-100">
+<div class="room-image">
+<a href="tour-details.html?tour=scandinavia-highlights">
+<img alt="Scandinavia" class="card-img-top" loading="lazy" src="../assets/Images/Destinations%20Scandinavia.png"/>
+</a>
+<span class="price-roomgrid">From <span class="tour-price-value" data-price-usd="2500">$2,500</span></span>
+</div>
+<h2>Scandinavia</h2>
+<p>Highlights</p>
+<div class="rating review-stars text-warning mb-3">
+<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+<span>(11 Reviews)</span>
+</div>
+<p class="tour-time"><i class="bi bi-clock text-primary"></i> 9 Days</p>
+<a class="book-now" href="tour-details.html?tour=scandinavia-highlights">BOOK NOW <span>➔</span></a>
+</div></div>
+</div>
+<!-- Pagination Container (will be managed by JS) -->
+<nav aria-label="Tour Search Pagination" class="mt-5 mb-4">
+<ul class="pagination justify-content-center" id="tsPagination">
+<!-- JS will inject pagination items here -->
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<!-- ========== FOOTER ========== -->
+<footer id="footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-3 col-md-6">
+        <img class="footer-logo" src="../assets/Images/Travora Footer2.png" alt="Travora Logo" />
+        <p>Your trusted partner for extraordinary travel experiences around the globe.</p>
+        <div class="dropdown mt-3">
+          <button class="currency-btn btn border rounded-2 fw-semibold d-flex align-items-center gap-1 dropdown-toggle" style="color: var(--tt-footer-text); border-color: rgba(255,255,255,0.15) !important;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-currency-dollar"></i> USD
+          </button>
+          <ul class="dropdown-menu border-0 shadow rounded-3 py-2">
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="USD"><i class="bi bi-currency-dollar me-1"></i>USD</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EUR"><i class="bi bi-currency-euro me-1"></i>EUR</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="GBP"><i class="bi bi-currency-pound me-1"></i>GBP</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EGP"><i class="bi bi-currency-exchange me-1"></i>EGP</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Contact</h5>
+        <p><i class="bi bi-telephone me-2 text-primary"></i>T: 1-634-567-34</p>
+        <p><i class="bi bi-envelope me-2 text-primary"></i>E: contact@traveltourtheme.co</p>
+        <div class="footer-social mt-3">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+          <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Useful Links</h5>
+        <ul class="footer-links">
+          <li><a href="blog.html">Travel Blog &amp; Tips</a></li>
+          <li><a href="about-us.html">Working With Us</a></li>
+          <li><a href="contact.html">Be Our Partner</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Pay Safely With Us</h5>
+        <p>The payment is encrypted and transmitted securely with an SSL protocol.</p>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="payment-icon"><i class="bi bi-credit-card-2-front"></i></span>
+          <span class="payment-icon"><i class="bi bi-credit-card"></i></span>
+          <span class="payment-icon"><i class="bi bi-paypal"></i></span>
+          <span class="payment-icon"><i class="bi bi-wallet2"></i></span>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+  </div>
+  <div class="footer-bottom">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <div>
+        <a href="../index.html">Home</a>
+        <a href="about-us.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="mb-0 text-muted">Copyright &copy; 2026 GoodLayers. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- UNIFIED AUTH MODAL -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg rounded-4">
+      <div class="modal-header border-bottom-0 pb-0">
+        <h5 class="modal-title neuton-bold fs-3" id="authModalLabel">Welcome to <span class="text-primary font-italic">Travora</span></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 p-md-5 pt-3">
+
+        <!-- Nav Tabs -->
+        <ul class="nav nav-pills nav-fill mb-4 bg-light rounded-pill p-1" id="authTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active rounded-pill fw-semibold" id="login-tab" data-bs-toggle="pill" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Login</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-pill fw-semibold" id="register-tab" data-bs-toggle="pill" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">Register</button>
+          </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="authTabContent">
+          <!-- Login Form -->
+          <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+            <form id="loginForm" novalidate>
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label fw-semibold text-dark auth-label-sm">Email Address <span class="text-primary">*</span></label>
+                <input type="email" class="form-control px-3 py-2" id="loginEmail" placeholder="you@example.com" required />
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label fw-semibold text-dark auth-label-sm">Password <span class="text-primary">*</span></label>
+                <input type="password" class="form-control px-3 py-2" id="loginPassword" placeholder="Enter your password" required />
+              </div>
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="rememberMe" />
+                  <label class="form-check-label text-muted auth-label-sm" for="rememberMe">Remember me</label>
+                </div>
+                <a href="#" class="text-primary text-decoration-none fw-medium auth-label-sm">Forgot password?</a>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 fw-semibold py-2 rounded-3">Login</button>
+            </form>
+          </div>
+
+          <!-- Register Form -->
+          <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+            <form id="registerForm" novalidate>
+              <div class="mb-3">
+                <label for="registerName" class="form-label fw-semibold text-dark auth-label-sm">Full Name <span class="text-primary">*</span></label>
+                <input type="text" class="form-control px-3 py-2" id="registerName" placeholder="John Doe" required />
+              </div>
+              <div class="mb-3">
+                <label for="registerEmail" class="form-label fw-semibold text-dark auth-label-sm">Email Address <span class="text-primary">*</span></label>
+                <input type="email" class="form-control px-3 py-2" id="registerEmail" placeholder="you@example.com" required />
+              </div>
+              <div class="mb-3">
+                <label for="registerPassword" class="form-label fw-semibold text-dark auth-label-sm">Password <span class="text-primary">*</span></label>
+                <input type="password" class="form-control px-3 py-2" id="registerPassword" placeholder="Min. 6 characters" required />
+              </div>
+              <div class="mb-4">
+                <label for="registerConfirmPassword" class="form-label fw-semibold text-dark auth-label-sm">Confirm Password <span class="text-primary">*</span></label>
+                <input type="password" class="form-control px-3 py-2" id="registerConfirmPassword" placeholder="Repeat your password" required />
+              </div>
+              <button type="submit" class="btn btn-primary w-100 fw-semibold py-2 rounded-3">Create Account</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+<div class="toast-container-fixed"></div>
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/script.js"></script>
+<script src="../assets/js/about.js"></script>
+</body>
+</html>

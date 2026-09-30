@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Travora – Discover amazing places at exclusive deals. Book tours, hotels, and travel experiences worldwide." />
+  <title>Travora – Find Your Next Adventure</title>
+  <link rel="icon" type="image/svg+xml" href="assets/Images/plane.svg">
+  <link rel="stylesheet" href="assets/CSS/bootstrap.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="assets/CSS/Style.css" />
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
+  <div class="container py-2">
+    <a class="navbar-brand fw-bold fs-3 neuton-bold" href="index.html">
+       <img class="footer-logo" src="assets/Images/Travora Navbar.png" alt="Travora Logo" />
+    </a>
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link active fw-medium" href="index.html" id="nav-home">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-medium" href="#" id="nav-pages" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+          <ul class="dropdown-menu" aria-labelledby="nav-pages">
+            <li><a class="dropdown-item" href="pages/destinations.html">Destinations</a></li>
+            <li><a class="dropdown-item" href="pages/about-us.html">About Us</a></li>
+            <li><a class="dropdown-item" href="pages/our-service.html">Our Service</a></li>
+            <li><a class="dropdown-item" href="pages/contact.html">Contact</a></li>
+            <li><a class="dropdown-item" href="pages/gallery.html">Gallery</a></li>
+            <li><a class="dropdown-item" href="pages/price-table.html">Price Table</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-medium" href="#" id="nav-tours" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tour List</a>
+          <ul class="dropdown-menu" aria-labelledby="nav-tours">
+            <li><a class="dropdown-item" href="pages/tour-grid.html">Tour Grid</a></li>
+            <li><a class="dropdown-item" href="pages/data-pricing.html">Date &amp; Pricing</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-medium" href="#" id="nav-rooms" role="button" data-bs-toggle="dropdown" aria-expanded="false">Room List</a>
+          <ul class="dropdown-menu" aria-labelledby="nav-rooms">
+            <li><a class="dropdown-item" href="pages/room-grid.html">Room Grid</a></li>
+            <li><a class="dropdown-item" href="pages/room-cart.html">Room Cart</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-medium" href="#" id="nav-search" role="button" data-bs-toggle="dropdown" aria-expanded="false">Search</a>
+          <ul class="dropdown-menu" aria-labelledby="nav-search">
+            <li><a class="dropdown-item" href="pages/tour-search.html">Tour Search</a></li>
+            <li><a class="dropdown-item" href="pages/room-search.html">Room Search</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link fw-medium" href="pages/blog.html" id="nav-blog">Blog</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+        <div class="dropdown">
+          <button class="currency-btn btn bg-transparent border rounded-2 fw-semibold d-flex align-items-center gap-1 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-currency-dollar"></i> USD
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end border-0 shadow rounded-3 py-2">
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="USD"><i class="bi bi-currency-dollar me-1"></i>USD</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EUR"><i class="bi bi-currency-euro me-1"></i>EUR</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="GBP"><i class="bi bi-currency-pound me-1"></i>GBP</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EGP"><i class="bi bi-currency-exchange me-1"></i>EGP</a></li>
+          </ul>
+        </div>
+        <button class="btn btn-primary fw-semibold rounded-3 px-4" type="button" data-bs-toggle="modal" data-bs-target="#authModal">Login</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== HERO SECTION ========== -->
+<section class="hero-section">
+  <div class="hero-shape-a"></div>
+  <div class="hero-shape-b"></div>
+  <div class="container position-relative">
+    <div class="row align-items-start g-5">
+      <div class="col-lg-6">
+        <span class="hero-badge badge rounded-pill fw-semibold d-inline-block mb-3">Book With Us!</span>
+        <h1 class="hero-title mb-3">Find Next Place<br />To <span class="highlight">Visit</span></h1>
+        <p class="hero-subtitle mb-4">Discover amazing places at exclusive deals. Eat, Shop, Visit interesting places around the world.</p>
+      </div>
+      <div class="col-lg-6">
+        <img src="assets/Images/Image Hero.png" alt="Travel destination with mountains and lake" class="img-fluid rounded-4 shadow-sm hero-img" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HERO SEARCH (Overlap) ========== -->
+<section class="hero-search-wrap">
+  <div class="container position-relative">
+    <div class="hero-search-form p-4">
+      <div class="row g-3 align-items-end">
+        <div class="col-md-4">
+          <label for="searchKeywords" class="form-label fw-semibold small text-muted">Keywords</label>
+          <input type="text" class="form-control py-2" id="searchKeywords" placeholder="Type Your Keywords" />
+        </div>
+        <div class="col-md-3">
+          <label for="searchDestination" class="form-label fw-semibold small text-muted">Destination</label>
+          <select class="form-select py-2" id="searchDestination">
+            <option value="">Any</option>
+            <option value="western-europe">Western Europe</option>
+            <option value="south-africa">South Africa</option>
+            <option value="scandinavia">Scandinavia</option>
+            <option value="egypt">Egypt</option>
+            <option value="asia">Asia</option>
+            <option value="america">America</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="searchDuration" class="form-label fw-semibold small text-muted">Duration</label>
+          <select class="form-select py-2" id="searchDuration">
+            <option value="">Any</option>
+            <option value="1-3">1–3 Days</option>
+            <option value="4-7">4–7 Days</option>
+            <option value="8-14">8–14 Days</option>
+            <option value="15+">15+ Days</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-primary w-100 py-2 fw-semibold" id="heroSearchBtn">
+            <i class="bi bi-search me-2"></i>Search Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHY CHOOSE US / AMAZING FEATURE ========== -->
+<section class="py-5 amazing-feature-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-label d-block mb-2">WHY CHOOSE US</span>
+      <h2 class="section-title">Amazing <span>Feature</span></h2>
+      <p class="section-subtitle mt-2">We offer the best services for your travel experiences.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6 col-12">
+        <div class="feature-stat-card">
+          <div class="feature-stat-icon"><i class="bi bi-suitcase2"></i></div>
+          <div>
+            <h3 class="fw-bold mb-1"><span class="counter" data-target="800">0</span>+</h3>
+            <p class="mb-0">Tour Packages</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12">
+        <div class="feature-stat-card">
+          <div class="feature-stat-icon"><i class="bi bi-people"></i></div>
+          <div>
+            <h3 class="fw-bold mb-1"><span class="counter" data-target="2500">0</span>+</h3>
+            <p class="mb-0">Happy Customers</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12">
+        <div class="feature-stat-card">
+          <div class="feature-stat-icon"><i class="bi bi-globe2"></i></div>
+          <div>
+            <h3 class="fw-bold mb-1"><span class="counter" data-target="120">0</span>+</h3>
+            <p class="mb-0">Countries</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12">
+        <div class="feature-stat-card">
+          <div class="feature-stat-icon"><i class="bi bi-trophy"></i></div>
+          <div>
+            <h3 class="fw-bold mb-1"><span class="counter" data-target="15">0</span>+</h3>
+            <p class="mb-0">Years Experience</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TOP DESTINATIONS ========== -->
+<section class="py-5 mt-4">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Top <span>Destinations</span></h2>
+      <p class="section-subtitle mt-2">Explore our top destinations voted by more than 100,000+ customers around the world.</p>
+      <a href="pages/destinations.html" class="d-inline-block mt-3 fw-medium text-decoration-none">All Destinations <i class="bi bi-arrow-right ms-1"></i></a>
+    </div>
+    <div class="row g-4">
+      <!-- Western Europe -->
+      <div class="col-lg-4 col-md-6">
+        <a href="pages/western-europe.html" class="destination-card d-block text-decoration-none">
+          <img src="assets/Images/Destinations Western Europe.png" alt="Western Europe" />
+          <span class="tour-badge">3 tours</span>
+          <div class="card-overlay"><h5>Western Europe</h5></div>
+          <div class="hover-overlay">
+            <h5>Western Europe</h5>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+            <span class="view-tours">View all tours</span>
+          </div>
+        </a>
+      </div>
+      <!-- South Africa -->
+      <div class="col-lg-4 col-md-6">
+        <a href="pages/south-africa.html" class="destination-card d-block text-decoration-none">
+          <img src="assets/Images/Destinations South Africa.png" alt="South Africa" />
+          <span class="tour-badge">2 tours</span>
+          <div class="card-overlay"><h5>South Africa</h5></div>
+          <div class="hover-overlay">
+            <h5>South Africa</h5>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+            <span class="view-tours">View all tours</span>
+          </div>
+        </a>
+      </div>
+      <!-- Scandinavia -->
+      <div class="col-lg-4 col-md-6">
+        <a href="pages/scandinavia.html" class="destination-card d-block text-decoration-none">
+          <img src="assets/Images/Destinations Scandinavia.png" alt="Scandinavia" />
+          <span class="tour-badge">2 tours</span>
+          <div class="card-overlay"><h5>Scandinavia</h5></div>
+          <div class="hover-overlay">
+            <h5>Scandinavia</h5>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+            <span class="view-tours">View all tours</span>
+          </div>
+        </a>
+      </div>
+      <!-- Egypt -->
+      <div class="col-lg-4 col-md-6">
+        <a href="pages/egypt.html" class="destination-card d-block text-decoration-none">
+          <img src="assets/Images/Destinations Egypt.png" alt="Egypt" />
+          <span class="tour-badge">3 tours</span>
+          <div class="card-overlay"><h5>Egypt</h5></div>
+          <div class="hover-overlay">
+            <h5>Egypt</h5>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+            <span class="view-tours">View all tours</span>
+          </div>
+        </a>
+      </div>
+      <!-- Asia -->
+      <div class="col-lg-4 col-md-6">
+        <a href="pages/asia.html" class="destination-card d-block text-decoration-none">
+          <img src="assets/Images/Destinations Asia.png" alt="Asia" />
+          <span class="tour-badge">6 tours</span>
+          <div class="card-overlay"><h5>Asia</h5></div>
+          <div class="hover-overlay">
+            <h5>Asia</h5>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+            <span class="view-tours">View all tours</span>
+          </div>
+        </a>
+      </div>
+      <!-- America -->
+      <div class="col-lg-4 col-md-6">
+        <a href="pages/america.html" class="destination-card d-block text-decoration-none">
+          <img src="assets/Images/Destinations America.png" alt="America" />
+          <span class="tour-badge">4 tours</span>
+          <div class="card-overlay"><h5>America</h5></div>
+          <div class="hover-overlay">
+            <h5>America</h5>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+            <span class="view-tours">View all tours</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== POPULAR TOURS (Multi-Card Carousel) ========== -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Popular <span>Tours</span></h2>
+      <p class="section-subtitle mt-2">The most popular tours booked by travelers from around the globe.</p>
+    </div>
+    <div class="multi-carousel" id="popularToursCarousel">
+      <button class="carousel-control-custom prev rounded-circle shadow-sm d-flex align-items-center justify-content-center" aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
+      <div class="multi-carousel-track">
+        <!-- Tour 1 -->
+        <div class="carousel-item-custom">
+          <a href="pages/tour-details.html?tour=moscow" class="popular-tour-card d-block text-decoration-none" style="background-image: url('assets/Images/Tour Two Moscow Tour of 7days.jpg');">
+            <div class="popular-tour-content">
+              <h5>Two Moscow Tour of 7 days</h5>
+              <span class="popular-tour-underline"></span>
+            </div>
+          </a>
+        </div>
+        <!-- Tour 2 -->
+        <div class="carousel-item-custom">
+          <a href="pages/tour-details.html?tour=austria" class="popular-tour-card d-block text-decoration-none" style="background-image: url('assets/Images/Tour Austria 6Days in Vienna Hallstatt.jpg');">
+            <span class="popular-tour-badge">Special Offer</span>
+            <div class="popular-tour-content">
+              <h5>Austria &ndash; 6 Days in Vienna, Hallstatt</h5>
+              <span class="popular-tour-underline"></span>
+            </div>
+          </a>
+        </div>
+        <!-- Tour 3 -->
+        <div class="carousel-item-custom">
+          <a href="pages/tour-details.html?tour=argentina" class="popular-tour-card d-block text-decoration-none" style="background-image: url('assets/Images/TT Argentina Great Diving Trip.png');">
+            <div class="popular-tour-content">
+              <h5>Argentina &ndash; Great Diving Trip</h5>
+              <span class="popular-tour-underline"></span>
+            </div>
+          </a>
+        </div>
+        <!-- Tour 4 -->
+        <div class="carousel-item-custom">
+          <a href="pages/tour-details.html?tour=india" class="popular-tour-card d-block text-decoration-none" style="background-image: url('assets/Images/TT India Mumbai New Delhi.png');">
+            <div class="popular-tour-content">
+              <h5>India &ndash; Mumbai &amp; New Delhi</h5>
+              <span class="popular-tour-underline"></span>
+            </div>
+          </a>
+        </div>
+        <!-- Tour 5 -->
+        <div class="carousel-item-custom">
+          <a href="pages/tour-details.html?tour=oahu" class="popular-tour-card d-block text-decoration-none" style="background-image: url('assets/Images/Tour 5Day Oahu Tour Honolulu.jpg');">
+            <div class="popular-tour-content">
+              <h5>5-Day Oahu Tour &ndash; Honolulu</h5>
+              <span class="popular-tour-underline"></span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <button class="carousel-control-custom next rounded-circle shadow-sm d-flex align-items-center justify-content-center" aria-label="Next"><i class="bi bi-chevron-right"></i></button>
+    </div>
+    <div class="text-center mt-4">
+      <a href="pages/tour-grid.html" class="d-inline-block fw-medium text-decoration-none">See More <i class="bi bi-arrow-right ms-1"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FRESHLY ADDED ========== -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Freshly <span>Added</span></h2>
+      <p class="section-subtitle mt-2">Explore our newest travel experiences and adventures.</p>
+      <a href="pages/tour-grid.html" class="d-inline-block mt-3 fw-medium text-decoration-none">View All Tours <i class="bi bi-arrow-right ms-1"></i></a>
+    </div>
+    <div class="multi-carousel multi-carousel-4" id="freshlyAddedCarousel">
+      <button class="carousel-control-custom prev rounded-circle shadow-sm d-flex align-items-center justify-content-center" aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
+      <div class="multi-carousel-track">
+        <div class="carousel-item-custom">
+          <div class="card tour-card shadow-sm h-100">
+            <a href="pages/tour-details.html?tour=africa-safari"><img src="assets/Images/Tour Africa Amazing African Safari.jpg" class="card-img-top" alt="African Safari" /></a>
+            <div class="card-body">
+              <h6 class="neuton-bold mb-1"><a href="pages/tour-details.html?tour=africa-safari" class="text-dark text-decoration-none">Africa – Amazing Safari</a></h6>
+              <p class="small text-muted mb-1"><i class="bi bi-geo-alt me-1 text-primary"></i>South Africa</p>
+              <div class="star-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <span class="price" data-price-usd="1500">$1,500</span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item-custom">
+          <div class="card tour-card shadow-sm h-100">
+            <a href="pages/tour-details.html?tour=dubai"><img src="assets/Images/Tour Dubai All Stunning Places.jpg" class="card-img-top" alt="Dubai" /></a>
+            <div class="card-body">
+              <h6 class="neuton-bold mb-1"><a href="pages/tour-details.html?tour=dubai" class="text-dark text-decoration-none">Dubai – Amazing Places</a></h6>
+              <p class="small text-muted mb-1"><i class="bi bi-geo-alt me-1 text-primary"></i>Asia</p>
+              <div class="star-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+              <span class="price" data-price-usd="2200">$2,200</span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item-custom">
+          <div class="card tour-card shadow-sm h-100">
+            <a href="pages/tour-details.html?tour=venice-rome-milan"><img src="assets/Images/Tour Venice Rome and Milan 9 Days.jpg" class="card-img-top" alt="Venice Rome Milan" /></a>
+            <div class="card-body">
+              <h6 class="neuton-bold mb-1"><a href="pages/tour-details.html?tour=venice-rome-milan" class="text-dark text-decoration-none">Venice – Rome and Milan</a></h6>
+              <p class="small text-muted mb-1"><i class="bi bi-geo-alt me-1 text-primary"></i>Western Europe</p>
+              <div class="star-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+              <span class="price" data-price-usd="3100">$3,100</span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item-custom">
+          <div class="card tour-card shadow-sm h-100">
+            <a href="pages/tour-details.html?tour=paris"><img src="assets/Images/Tour Pais Eiffel Tower Notre Dame Cath.jpg" class="card-img-top" alt="Paris" /></a>
+            <div class="card-body">
+              <h6 class="neuton-bold mb-1"><a href="pages/tour-details.html?tour=paris" class="text-dark text-decoration-none">Enjoy Paris – 6 Days</a></h6>
+              <p class="small text-muted mb-1"><i class="bi bi-geo-alt me-1 text-primary"></i>Western Europe</p>
+              <div class="star-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <span class="price" data-price-usd="1900">$1,900</span>
+            </div>
+          </div>
+        </div>
+        <!-- Duplicate cards to allow carousel scrolling effect -->
+        <div class="carousel-item-custom">
+          <div class="card tour-card shadow-sm h-100">
+            <a href="pages/tour-details.html?tour=africa-safari"><img src="assets/Images/Tour Africa Amazing African Safari.jpg" class="card-img-top" alt="African Safari" /></a>
+            <div class="card-body">
+              <h6 class="neuton-bold mb-1"><a href="pages/tour-details.html?tour=africa-safari" class="text-dark text-decoration-none">Africa – Amazing Safari</a></h6>
+              <p class="small text-muted mb-1"><i class="bi bi-geo-alt me-1 text-primary"></i>South Africa</p>
+              <div class="star-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <span class="price" data-price-usd="1500">$1,500</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-custom next rounded-circle shadow-sm d-flex align-items-center justify-content-center" aria-label="Next"><i class="bi bi-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HOTEL ROOMS ========== -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Hotel <span>Rooms</span></h2>
+      <p class="section-subtitle mt-2">Comfortable and luxurious hotel rooms for your stay.</p>
+      <a href="pages/room-grid.html" class="d-inline-block mt-3 fw-medium text-decoration-none">View All Rooms <i class="bi bi-arrow-right ms-1"></i></a>
+    </div>
+    <div class="multi-carousel multi-carousel-4" id="hotelRoomsCarousel">
+      <button class="carousel-control-custom prev rounded-circle shadow-sm d-flex align-items-center justify-content-center" aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
+      <div class="multi-carousel-track">
+        <div class="carousel-item-custom">
+          <a href="pages/room-grid.html" class="text-decoration-none">
+            <div class="card room-card shadow-sm h-100">
+              <img src="assets/Images/Room Luxury Suite.jpg" class="card-img-top" alt="Luxury Suite" />
+              <div class="card-body">
+                <h6 class="neuton-bold text-dark mb-1">Luxury Suite</h6>
+                <div class="star-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="small text-muted mb-1"><i class="bi bi-people me-1"></i>2 Guests &middot; <i class="bi bi-arrows-fullscreen ms-1 me-1"></i>45m²</p>
+                <span class="text-muted small">From</span> <span class="price" data-price-usd="350">$350</span><span class="text-muted small">/night</span>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="carousel-item-custom">
+          <a href="pages/room-grid.html" class="text-decoration-none">
+            <div class="card room-card shadow-sm h-100">
+              <img src="assets/Images/Room Standard.jpg" class="card-img-top" alt="Standard Room" />
+              <div class="card-body">
+                <h6 class="neuton-bold text-dark mb-1">Standard Room</h6>
+                <div class="star-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                <p class="small text-muted mb-1"><i class="bi bi-people me-1"></i>2 Guests &middot; <i class="bi bi-arrows-fullscreen ms-1 me-1"></i>30m²</p>
+                <span class="text-muted small">From</span> <span class="price" data-price-usd="150">$150</span><span class="text-muted small">/night</span>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="carousel-item-custom">
+          <a href="pages/room-grid.html" class="text-decoration-none">
+            <div class="card room-card shadow-sm h-100">
+              <img src="assets/Images/Room The Penthouse.jpg" class="card-img-top" alt="The Penthouse" />
+              <div class="card-body">
+                <h6 class="neuton-bold text-dark mb-1">The Penthouse</h6>
+                <div class="star-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="small text-muted mb-1"><i class="bi bi-people me-1"></i>4 Guests &middot; <i class="bi bi-arrows-fullscreen ms-1 me-1"></i>120m²</p>
+                <span class="text-muted small">From</span> <span class="price" data-price-usd="800">$800</span><span class="text-muted small">/night</span>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="carousel-item-custom">
+          <a href="pages/room-grid.html" class="text-decoration-none">
+            <div class="card room-card shadow-sm h-100">
+              <img src="assets/Images/Room Grand Suite.jpg" class="card-img-top" alt="Grand Suite" />
+              <div class="card-body">
+                <h6 class="neuton-bold text-dark mb-1">Grand Suite Room</h6>
+                <div class="star-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                <p class="small text-muted mb-1"><i class="bi bi-people me-1"></i>3 Guests &middot; <i class="bi bi-arrows-fullscreen ms-1 me-1"></i>65m²</p>
+                <span class="text-muted small">From</span> <span class="price" data-price-usd="500">$500</span><span class="text-muted small">/night</span>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Duplicate for sliding effect -->
+        <div class="carousel-item-custom">
+          <a href="pages/room-grid.html" class="text-decoration-none">
+            <div class="card room-card shadow-sm h-100">
+              <img src="assets/Images/Room Luxury Suite.jpg" class="card-img-top" alt="Luxury Suite" />
+              <div class="card-body">
+                <h6 class="neuton-bold text-dark mb-1">Luxury Suite</h6>
+                <div class="star-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="small text-muted mb-1"><i class="bi bi-people me-1"></i>2 Guests &middot; <i class="bi bi-arrows-fullscreen ms-1 me-1"></i>45m²</p>
+                <span class="text-muted small">From</span> <span class="price" data-price-usd="350">$350</span><span class="text-muted small">/night</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <button class="carousel-control-custom next rounded-circle shadow-sm d-flex align-items-center justify-content-center" aria-label="Next"><i class="bi bi-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROMOTIONAL + NEWSLETTER ========== -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Promotional -->
+      <div class="col-lg-6">
+        <div class="promo-section" style="background-image: url('assets/Images/TT America Grand canyon Golden Gate.png');">
+          <div class="promo-overlay">
+            <h3 class="neuton-bold mb-2">Discover Special <span class="fst-italic">Deals!</span></h3>
+            <p class="mb-3 opacity-75">Explore exclusive travel packages with incredible savings up to 50% off.</p>
+            <div><a href="pages/tour-search.html" class="btn btn-light fw-semibold rounded-3 px-4">Explore Deals</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- Newsletter -->
+      <div class="col-lg-6">
+        <div class="newsletter-section bg-light h-100 d-flex flex-column justify-content-center p-4 p-lg-5 rounded-4">
+          <h3 class="neuton-bold mb-2">Don't miss a <span class="fst-italic text-primary">thing</span></h3>
+          <p class="text-muted mb-3">Subscribe to our newsletter and get the latest travel deals and offers straight to your inbox.</p>
+          <form class="newsletter-form">
+            <div class="input-group">
+              <input type="email" class="form-control py-2" placeholder="Enter your email..." required />
+              <button class="btn btn-primary px-4 fw-semibold" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="py-5 testimonials-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">What our customers are<br />saying about <span>us</span></h2>
+    </div>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="hover">
+      <div class="testimonial-stage">
+        <div class="carousel-inner">
+
+          <!-- Slide 1 : center = James Davis -->
+          <div class="carousel-item">
+            <div class="testimonial-row">
+              <div class="testimonial-card side-card d-none d-md-block">
+                <div class="testimonial-avatar">AK</div>
+                <div class="star-rating mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testimonial-text mb-4">"Wonderful trip to Europe! Everything was well-planned and the hotels were fantastic. Will definitely book again."</p>
+                <h6 class="testimonial-name mb-0">Ahmed Khan</h6>
+                <small class="text-muted">Cairo, Egypt</small>
+              </div>
+              <div class="testimonial-card center-card">
+                <div class="testimonial-avatar">JD</div>
+                <div class="star-rating mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testimonial-text mb-4">"Their planning and support made our vacation stress-free and unforgettable. Highly recommended!"</p>
+                <h6 class="testimonial-name mb-0">James Davis</h6>
+                <small class="text-muted">New York, USA</small>
+              </div>
+              <div class="testimonial-card side-card d-none d-md-block">
+                <div class="testimonial-avatar">SM</div>
+                <div class="star-rating mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testimonial-text mb-4">"Best travel agency I've ever used. Great prices, amazing destinations, and the customer service is top-notch!"</p>
+                <h6 class="testimonial-name mb-0">Sarah Miller</h6>
+                <small class="text-muted">London, UK</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 : center = Sarah Miller (initial active slide) -->
+          <div class="carousel-item active">
+            <div class="testimonial-row">
+              <div class="testimonial-card side-card d-none d-md-block">
+                <div class="testimonial-avatar">JD</div>
+                <div class="star-rating mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testimonial-text mb-4">"Their planning and support made our vacation stress-free and unforgettable. Highly recommended!"</p>
+                <h6 class="testimonial-name mb-0">James Davis</h6>
+                <small class="text-muted">New York, USA</small>
+              </div>
+              <div class="testimonial-card center-card">
+                <div class="testimonial-avatar">SM</div>
+                <div class="star-rating mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testimonial-text mb-4">"Best travel agency I've ever used. Great prices, amazing destinations, and the customer service is top-notch!"</p>
+                <h6 class="testimonial-name mb-0">Sarah Miller</h6>
+                <small class="text-muted">London, UK</small>
+              </div>
+              <div class="testimonial-card side-card d-none d-md-block">
+                <div class="testimonial-avatar">RW</div>
+                <div class="star-rating mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testimonial-text mb-4">"Excellent experience from start to finish. Will definitely book with them again!"</p>
+                <h6 class="testimonial-name mb-0">Robert Wilson</h6>
+                <small class="text-muted">Sydney, Australia</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 : center = Robert Wilson -->
+          <div class="carousel-item">
+            <div class="testimonial-row">
+              <div class="testimonial-card side-card d-none d-md-block">
+                <div class="testimonial-avatar">SM</div>
+                <div class="star-rating mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testimonial-text mb-4">"Best travel agency I've ever used. Great prices, amazing destinations, and the customer service is top-notch!"</p>
+                <h6 class="testimonial-name mb-0">Sarah Miller</h6>
+                <small class="text-muted">London, UK</small>
+              </div>
+              <div class="testimonial-card center-card">
+                <div class="testimonial-avatar">RW</div>
+                <div class="star-rating mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testimonial-text mb-4">"Excellent experience from start to finish. Will definitely book with them again!"</p>
+                <h6 class="testimonial-name mb-0">Robert Wilson</h6>
+                <small class="text-muted">Sydney, Australia</small>
+              </div>
+              <div class="testimonial-card side-card d-none d-md-block">
+                <div class="testimonial-avatar">AK</div>
+                <div class="star-rating mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testimonial-text mb-4">"Wonderful trip to Europe! Everything was well-planned and the hotels were fantastic. Will definitely book again."</p>
+                <h6 class="testimonial-name mb-0">Ahmed Khan</h6>
+                <small class="text-muted">Cairo, Egypt</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 : center = Ahmed Khan -->
+          <div class="carousel-item">
+            <div class="testimonial-row">
+              <div class="testimonial-card side-card d-none d-md-block">
+                <div class="testimonial-avatar">RW</div>
+                <div class="star-rating mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testimonial-text mb-4">"Excellent experience from start to finish. Will definitely book with them again!"</p>
+                <h6 class="testimonial-name mb-0">Robert Wilson</h6>
+                <small class="text-muted">Sydney, Australia</small>
+              </div>
+              <div class="testimonial-card center-card">
+                <div class="testimonial-avatar">AK</div>
+                <div class="star-rating mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testimonial-text mb-4">"Wonderful trip to Europe! Everything was well-planned and the hotels were fantastic. Will definitely book again."</p>
+                <h6 class="testimonial-name mb-0">Ahmed Khan</h6>
+                <small class="text-muted">Cairo, Egypt</small>
+              </div>
+              <div class="testimonial-card side-card d-none d-md-block">
+                <div class="testimonial-avatar">JD</div>
+                <div class="star-rating mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testimonial-text mb-4">"Their planning and support made our vacation stress-free and unforgettable. Highly recommended!"</p>
+                <h6 class="testimonial-name mb-0">James Davis</h6>
+                <small class="text-muted">New York, USA</small>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" class="active" aria-current="true" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FEATURES ========== -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="feature-item">
+          <img src="assets/Images/L 700 Destinations.png" alt="700+ Destinations" class="mb-3" />
+          <h3 class="fw-bold text-primary mb-1"><span class="counter" data-target="700">0</span>+</h3>
+          <h5 class="neuton-bold">Destinations</h5>
+          <p class="text-muted px-4">Our expert team handpicked all destinations in this site.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-item">
+          <img src="assets/Images/L Best Price Gurantee.png" alt="Best Price Guarantee" class="mb-3" />
+          <h3 class="fw-bold text-primary mb-1"><span class="counter" data-target="100">0</span>%</h3>
+          <h5 class="neuton-bold">Best Price Guarantee</h5>
+          <p class="text-muted px-4">Price match within 48 hours of order confirmation.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-item">
+          <img src="assets/Images/L Top Notch Support.png" alt="Top Notch Support" class="mb-3" />
+          <h3 class="fw-bold text-primary mb-1"><span class="counter" data-target="24">0</span>/7</h3>
+          <h5 class="neuton-bold">Top Notch Support</h5>
+          <p class="text-muted px-4">We are here to help, before, during, and even after your trip.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer id="footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-3 col-md-6">
+        <img class="footer-logo" src="assets/Images/Travora Footer2.png" alt="Travora Logo" />
+        <p>Your trusted partner for extraordinary travel experiences around the globe.</p>
+        <div class="dropdown mt-3">
+          <button class="currency-btn btn border rounded-2 fw-semibold d-flex align-items-center gap-1 dropdown-toggle" style="color: var(--tt-footer-text); border-color: rgba(255,255,255,0.15) !important;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-currency-dollar"></i> USD
+          </button>
+          <ul class="dropdown-menu border-0 shadow rounded-3 py-2">
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="USD"><i class="bi bi-currency-dollar me-1"></i>USD</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EUR"><i class="bi bi-currency-euro me-1"></i>EUR</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="GBP"><i class="bi bi-currency-pound me-1"></i>GBP</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EGP"><i class="bi bi-currency-exchange me-1"></i>EGP</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Contact</h5>
+        <p><i class="bi bi-telephone me-2 text-primary"></i>T: 1-634-567-34</p>
+        <p><i class="bi bi-envelope me-2 text-primary"></i>E: contact@traveltourtheme.co</p>
+        <div class="footer-social mt-3">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+          <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Useful Links</h5>
+        <ul class="footer-links">
+          <li><a href="pages/blog.html">Travel Blog &amp; Tips</a></li>
+          <li><a href="pages/about-us.html">Working With Us</a></li>
+          <li><a href="pages/contact.html">Be Our Partner</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Pay Safely With Us</h5>
+        <p>The payment is encrypted and transmitted securely with an SSL protocol.</p>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="payment-icon"><i class="bi bi-credit-card-2-front"></i></span>
+          <span class="payment-icon"><i class="bi bi-credit-card"></i></span>
+          <span class="payment-icon"><i class="bi bi-paypal"></i></span>
+          <span class="payment-icon"><i class="bi bi-wallet2"></i></span>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+  </div>
+  <div class="footer-bottom">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <div>
+        <a href="index.html">Home</a>
+        <a href="pages/about-us.html">About</a>
+        <a href="pages/blog.html">Blog</a>
+        <a href="pages/contact.html">Contact</a>
+      </div>
+      <p class="mb-0 text-muted">Copyright &copy; 2026 GoodLayers. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== AUTH MODAL ========== -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg rounded-4">
+      <div class="modal-header border-bottom-0 pb-0">
+        <h5 class="modal-title neuton-bold fs-3" id="authModalLabel">Welcome to <span class="text-primary fst-italic">Travel Tour</span></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 p-md-5 pt-3">
+        <ul class="nav nav-pills nav-fill mb-4 bg-light rounded-pill p-1" id="authTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active rounded-pill fw-semibold" id="login-tab" data-bs-toggle="pill" data-bs-target="#login" type="button" role="tab">Login</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-pill fw-semibold" id="register-tab" data-bs-toggle="pill" data-bs-target="#register" type="button" role="tab">Register</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="authTabContent">
+          <div class="tab-pane fade show active" id="login" role="tabpanel">
+            <form id="loginForm" novalidate>
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label fw-semibold small">Email Address <span class="text-primary">*</span></label>
+                <input type="email" class="form-control py-2" id="loginEmail" placeholder="you@example.com" required />
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label fw-semibold small">Password <span class="text-primary">*</span></label>
+                <input type="password" class="form-control py-2" id="loginPassword" placeholder="Enter your password" required />
+              </div>
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="rememberMe" />
+                  <label class="form-check-label text-muted small" for="rememberMe">Remember me</label>
+                </div>
+                <a href="#" class="text-primary text-decoration-none fw-medium small">Forgot password?</a>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 fw-semibold py-2 rounded-3">Login</button>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="register" role="tabpanel">
+            <form id="registerForm" novalidate>
+              <div class="mb-3">
+                <label for="registerName" class="form-label fw-semibold small">Full Name <span class="text-primary">*</span></label>
+                <input type="text" class="form-control py-2" id="registerName" placeholder="John Doe" required />
+              </div>
+              <div class="mb-3">
+                <label for="registerEmail" class="form-label fw-semibold small">Email Address <span class="text-primary">*</span></label>
+                <input type="email" class="form-control py-2" id="registerEmail" placeholder="you@example.com" required />
+              </div>
+              <div class="mb-3">
+                <label for="registerPassword" class="form-label fw-semibold small">Password <span class="text-primary">*</span></label>
+                <input type="password" class="form-control py-2" id="registerPassword" placeholder="Min. 6 characters" required />
+              </div>
+              <div class="mb-4">
+                <label for="registerConfirmPassword" class="form-label fw-semibold small">Confirm Password <span class="text-primary">*</span></label>
+                <input type="password" class="form-control py-2" id="registerConfirmPassword" placeholder="Repeat your password" required />
+              </div>
+              <button type="submit" class="btn btn-primary w-100 fw-semibold py-2 rounded-3">Create Account</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== BACK TO TOP ========== -->
+<button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<!-- ========== TOAST CONTAINER ========== -->
+<div class="toast-container-fixed"></div>
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

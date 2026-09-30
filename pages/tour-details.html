@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Argentina – Great Diving Trip. Explore Patagonia's underwater world with this unforgettable 2-day diving adventure." />
+  <title>Travora – Argentina Great Diving Trip</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/Images/plane.svg">
+  <link rel="stylesheet" href="../assets/CSS/bootstrap.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="../assets/CSS/Style.css" />
+
+ 
+
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== --> 
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar"> 
+  <div class="container py-2"> 
+    <a class="navbar-brand fw-bold fs-3 neuton-bold" href="../index.html"> 
+       <img class="footer-logo" src="../assets/Images/Travora Navbar.png" alt="Travora Logo" /> 
+    </a> 
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
+      <span class="navbar-toggler-icon"></span> 
+    </button> 
+    <div class="collapse navbar-collapse" id="navbarNav"> 
+      <ul class="navbar-nav mx-auto align-items-lg-center"> 
+        <li class="nav-item"><a class="nav-link fw-medium" href="../index.html" id="nav-home">Home</a></li> 
+        <li class="nav-item dropdown"> 
+          <a class="nav-link dropdown-toggle fw-medium" href="#" id="nav-pages" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a> 
+          <ul class="dropdown-menu" aria-labelledby="nav-pages"> 
+            <li><a class="dropdown-item" href="destinations.html">Destinations</a></li> 
+            <li><a class="dropdown-item" href="about-us.html">About Us</a></li> 
+            <li><a class="dropdown-item" href="our-service.html">Our Service</a></li> 
+            <li><a class="dropdown-item" href="contact.html">Contact</a></li> 
+            <li><a class="dropdown-item" href="gallery.html">Gallery</a></li> 
+            <li><a class="dropdown-item" href="price-table.html">Price Table</a></li> 
+          </ul> 
+        </li> 
+        <li class="nav-item dropdown"> 
+          <a class="nav-link dropdown-toggle active fw-medium" href="#" id="nav-tours" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tour List</a> 
+          <ul class="dropdown-menu" aria-labelledby="nav-tours"> 
+            <li><a class="dropdown-item" href="tour-grid.html">Tour Grid</a></li> 
+            <li><a class="dropdown-item" href="data-pricing.html">Date &amp; Pricing</a></li> 
+          </ul> 
+        </li> 
+        <li class="nav-item dropdown"> 
+          <a class="nav-link dropdown-toggle fw-medium" href="#" id="nav-rooms" role="button" data-bs-toggle="dropdown" aria-expanded="false">Room List</a> 
+          <ul class="dropdown-menu" aria-labelledby="nav-rooms"> 
+            <li><a class="dropdown-item" href="room-grid.html">Room Grid</a></li> 
+            <li><a class="dropdown-item" href="room-cart.html">Room Cart</a></li> 
+          </ul> 
+        </li> 
+        <li class="nav-item dropdown"> 
+          <a class="nav-link dropdown-toggle fw-medium" href="#" id="nav-search" role="button" data-bs-toggle="dropdown" aria-expanded="false">Search</a> 
+          <ul class="dropdown-menu" aria-labelledby="nav-search"> 
+            <li><a class="dropdown-item" href="tour-search.html">Tour Search</a></li> 
+            <li><a class="dropdown-item" href="room-search.html">Room Search</a></li> 
+          </ul> 
+        </li> 
+        <li class="nav-item"><a class="nav-link fw-medium" href="blog.html" id="nav-blog">Blog</a></li> 
+      </ul> 
+      <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0"> 
+        <div class="dropdown"> 
+          <button class="currency-btn btn bg-transparent border rounded-2 fw-semibold d-flex align-items-center gap-1 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"> 
+            <i class="bi bi-currency-dollar"></i> USD 
+          </button> 
+          <ul class="dropdown-menu dropdown-menu-end border-0 shadow rounded-3 py-2"> 
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="USD"><i class="bi bi-currency-dollar me-1"></i>USD</a></li> 
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EUR"><i class="bi bi-currency-euro me-1"></i>EUR</a></li> 
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="GBP"><i class="bi bi-currency-pound me-1"></i>GBP</a></li> 
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EGP"><i class="bi bi-currency-exchange me-1"></i>EGP</a></li> 
+          </ul> 
+        </div> 
+        <button class="btn btn-primary fw-semibold rounded-3 px-4" type="button" data-bs-toggle="modal" data-bs-target="#authModal">Login</button> 
+      </div> 
+    </div> 
+  </div> 
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-hero">
+  <div class="container">
+    <h1 class="neuton-bold" id="tourHeroTitle">Argentina – Great <span>Diving Trip</span></h1>
+    <nav aria-label="breadcrumb" class="mt-2">
+      <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+        <li class="breadcrumb-item" id="tourBreadcrumbParentLi"><a href="western-europe.html" id="tourBreadcrumbParentLink">Western Europe</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="tourBreadcrumbActive">Argentina – Great Diving Trip</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<!-- TOUR DETAILS -->
+<section style="padding: 60px 0; background: #f7f9fc;">
+  <div class="container">
+    <div class="row g-5 tour-details-layout">
+
+      <!-- Left: Tour Content -->
+      <div class="col-lg-8 tour-details-main">
+
+        <!-- Image Gallery -->
+        <div class="tour-details-gallery mb-4">
+          <img src="../assets/Images/TT Argentina Great Diving Trip.png" alt="Argentina Diving Main" class="main-img" id="mainTourImg" />
+          <div class="row g-2" id="tourGalleryThumbs">
+            <div class="col-4"><img src="../assets/Images/Tour Molokini and Turtle Snorkeling.jpg" alt="Diving Thumb 1" class="thumb-img" onclick="document.getElementById('mainTourImg').src=this.src" /></div>
+            <div class="col-4"><img src="../assets/Images/Tour Africa Amazing African Safari.jpg" alt="Diving Thumb 2" class="thumb-img" onclick="document.getElementById('mainTourImg').src=this.src" /></div>
+            <div class="col-4"><img src="../assets/Images/TT Argentina Great Diving Trip.png" alt="Diving Thumb 3" class="thumb-img" onclick="document.getElementById('mainTourImg').src=this.src" /></div>
+          </div>
+        </div>
+
+        <!-- Tour Title & Info -->
+        <h2 class="neuton-bold mb-2" id="tourTitleH2">Argentina – Great Diving Trip</h2>
+        <div class="star-rating mb-3">
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          <small class="text-muted ms-1" id="tourReviewCountText">1 Review</small>
+        </div>
+        <div class="d-flex flex-wrap gap-3 mb-4">
+          <span class="tour-info-badge" id="tourDurationBadge"><i class="bi bi-clock"></i> 2 Days 1 Night</span>
+          <span class="tour-info-badge"><i class="bi bi-people"></i> Max 12 Guests</span>
+          <span class="tour-info-badge"><i class="bi bi-wifi"></i> Free WiFi</span>
+          <span class="tour-info-badge"><i class="bi bi-person"></i> Ages 18-65</span>
+        </div>
+
+        <!-- Detail -->
+        <div class="tour-content-section">
+          <h3>Detail</h3>
+          <div id="tourDetailText">
+          <p>Argentina's coastline holds some of South America's most spectacular dive sites. From encounters with elephant seals and penguins to exploring underwater kelp forests teeming with life, this is a diving adventure unlike any other. We cover the best dive sites, operators, and what to expect during your 2-day underwater journey through the crystal-clear waters of Patagonia.</p>
+          <p>Our experienced diving instructors will guide you through shallow and deep dives, ensuring safety while maximizing your encounter with incredible marine wildlife. Expect to see sea lions, colorful starfish, octopus, and an abundance of marine flora.</p>
+          </div>
+        </div>
+
+        <!-- Price Includes -->
+        <div class="tour-content-section">
+          <h3>Price Includes</h3>
+          <ul class="includes-list" id="tourIncludesList">
+            <li><i class="bi bi-check-circle-fill"></i> Professional diving instructor</li>
+            <li><i class="bi bi-check-circle-fill"></i> All diving equipment</li>
+            <li><i class="bi bi-check-circle-fill"></i> Hotel accommodation (1 night)</li>
+            <li><i class="bi bi-check-circle-fill"></i> Breakfast and lunch</li>
+            <li><i class="bi bi-check-circle-fill"></i> Airport transfer</li>
+            <li><i class="bi bi-check-circle-fill"></i> Travel insurance</li>
+          </ul>
+        </div>
+
+        <!-- Price Excludes -->
+        <div class="tour-content-section">
+          <h3>Price Excludes</h3>
+          <ul class="excludes-list">
+            <li><i class="bi bi-x-circle-fill"></i> International flights</li>
+            <li><i class="bi bi-x-circle-fill"></i> Personal expenses</li>
+            <li><i class="bi bi-x-circle-fill"></i> Tips and gratuities</li>
+            <li><i class="bi bi-x-circle-fill"></i> Dinner</li>
+          </ul>
+        </div>
+
+        <!-- What To Expect -->
+        <div class="tour-content-section">
+          <h3>What To Expect</h3>
+          <p id="tourWhatToExpect">Upon arrival at the dive site, you will be greeted by your professional diving team. After a brief orientation and equipment check, you'll embark on your first dive in the sheltered bay. The second day features a deep-water excursion where you'll encounter larger marine life in the open ocean.</p>
+        </div>
+
+        <!-- Itinerary -->
+        <div class="tour-content-section">
+          <h3>Itinerary</h3>
+          <div class="itinerary-item">
+            <div class="itinerary-day">Day 1</div>
+            <div class="itinerary-content">
+              <h5 id="tourDay1Title">Arrival & Shallow Dive</h5>
+              <p id="tourDay1Text">Check in at the coastal resort. Afternoon orientation session followed by a 45-minute shallow-water dive in the protected bay. Evening welcome dinner with the diving team.</p>
+            </div>
+          </div>
+          <div class="itinerary-item">
+            <div class="itinerary-day">Day 2</div>
+            <div class="itinerary-content">
+              <h5 id="tourDay2Title">Deep Dive & Departure</h5>
+              <p id="tourDay2Text">Early morning boat trip to the deep-water dive site. Two dives with marine wildlife encounters. Lunch on the boat. Return to resort and departure transfer to the airport.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="tour-content-section">
+          <h3>Map</h3>
+          <div class="map-placeholder">
+            <i class="bi bi-map"></i>
+            <p style="font-weight:600; color:#1e2d3d; margin-bottom:4px;" id="tourMapLabel">Tour Location</p>
+            <p id="tourMapLocationText">Puerto Madryn, Patagonia, Argentina</p>
+            <a href="https://maps.google.com/?q=Puerto+Madryn+Argentina" target="_blank" class="btn-blue" style="padding:10px 22px; font-size:14px;" id="tourMapLink">
+              <i class="bi bi-map me-2"></i>Open in Google Maps
+            </a>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="tour-content-section">
+          <h3>FAQ</h3>
+          <div class="accordion" id="tourFaq">
+            <div class="faq-item">
+              <h2 class="accordion-header" id="tfaq1h">
+                <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tfaq1" id="tourFaqBtn1">Do I need diving experience?</button>
+              </h2>
+              <div id="tfaq1" class="accordion-collapse collapse" data-bs-parent="#tourFaq">
+                <div class="faq-body" id="tourFaqBody1">No prior experience is required. Our instructors will provide complete training before each dive. However, basic swimming ability is required.</div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <h2 class="accordion-header" id="tfaq2h">
+                <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tfaq2" id="tourFaqBtn2">What should I bring?</button>
+              </h2>
+              <div id="tfaq2" class="accordion-collapse collapse" data-bs-parent="#tourFaq">
+                <div class="faq-body" id="tourFaqBody2">Bring swimwear, sunscreen, a towel, and a sense of adventure! All diving equipment is provided including wetsuits.</div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <h2 class="accordion-header" id="tfaq3h">
+                <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tfaq3">Is there an age limit?</button>
+              </h2>
+              <div id="tfaq3" class="accordion-collapse collapse" data-bs-parent="#tourFaq">
+                <div class="faq-body">Participants must be between 18 and 65 years old. A medical certificate may be required for participants over 55.</div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <h2 class="accordion-header" id="tfaq4h">
+                <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tfaq4">Can I cancel my booking?</button>
+              </h2>
+              <div id="tfaq4" class="accordion-collapse collapse" data-bs-parent="#tourFaq">
+                <div class="faq-body">Free cancellation up to 30 days before the tour. Cancellations within 15-30 days incur a 25% fee. No refunds within 15 days of departure.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Tours -->
+        <div class="tour-content-section">
+          <h3>Related Tours</h3>
+          <div class="row g-4" id="tourRelatedContainer">
+            <div class="col-md-4">
+              <div class="card tour-card shadow-sm h-100">
+                <a href="tour-details.html?tour=austria"><img src="../assets/Images/Tour Austria 6Days in Vienna Hallstatt.jpg" class="card-img-top" alt="Austria Tour" /></a>
+                <div class="card-body">
+                  <h6 class="neuton-bold mb-1"><a href="tour-details.html?tour=austria" class="text-dark text-decoration-none">6 Days Vienna &amp; Hallstatt</a></h6>
+                  <div class="star-rating mb-1"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  <span class="price" data-price-usd="2100">$2,100</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card tour-card shadow-sm h-100">
+                <a href="tour-details.html?tour=venice-rome-milan"><img src="../assets/Images/Tour Venice Rome and Milan 9 Days.jpg" class="card-img-top" alt="Italy Tour" /></a>
+                <div class="card-body">
+                  <h6 class="neuton-bold mb-1"><a href="tour-details.html?tour=venice-rome-milan" class="text-dark text-decoration-none">Venice, Rome &amp; Milan</a></h6>
+                  <div class="star-rating mb-1"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                  <span class="price" data-price-usd="3100">$3,100</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card tour-card shadow-sm h-100">
+                <a href="tour-details.html?tour=moscow"><img src="../assets/Images/Tour Two Moscow Tour of 7days.jpg" class="card-img-top" alt="Moscow Tour" /></a>
+                <div class="card-body">
+                  <h6 class="neuton-bold mb-1"><a href="tour-details.html?tour=moscow" class="text-dark text-decoration-none">Two Moscow Tour 7 Days</a></h6>
+                  <div class="star-rating mb-1"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  <span class="price" data-price-usd="1800">$1,800</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reviews -->
+        <div class="tour-content-section">
+          <h3>Reviews</h3>
+          <div class="card border-0 shadow-sm rounded-4 p-4 mb-3">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="testimonial-avatar" style="width:50px;height:50px;font-size:1rem;" id="tourReviewerInitials">CM</div>
+              <div>
+                <h6 class="neuton-bold mb-1" id="tourReviewerName">Carlos Mendez</h6>
+                <div class="star-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="mb-0 small text-muted" id="tourReviewText">"An absolutely unforgettable experience! The underwater kelp forests were breathtaking, and our instructor made everything feel safe and exciting. Highly recommend for anyone visiting Patagonia."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: Booking Card -->
+      <div class="col-lg-4 tour-details-sidebar">
+        <div class="booking-card">
+          <div class="text-center mb-3">
+            <span class="booking-price-old me-2" id="tourBookingPriceOld" data-price-usd="1400">$1,400</span>
+            <span class="booking-price" id="tourBookingPrice" data-price-usd="1200">$1,200</span>
+            <p class="small text-muted mt-1">per person</p>
+          </div>
+          <hr />
+          <form id="bookingForm" novalidate>
+            <div class="mb-3">
+              <label class="form-label fw-semibold small">Date <span class="text-primary">*</span></label>
+              <input type="date" class="form-control" id="bookingDate" required />
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold small">Number of People <span class="text-primary">*</span></label>
+              <select class="form-select" id="bookingPeople" required>
+                <option value="">Select</option>
+                <option value="1">1 Person</option>
+                <option value="2">2 People</option>
+                <option value="3">3 People</option>
+                <option value="4">4 People</option>
+                <option value="5">5 People</option>
+                <option value="6">6+ People</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold small">Full Name <span class="text-primary">*</span></label>
+              <input type="text" class="form-control" id="bookingName" placeholder="John Doe" required />
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold small">Email <span class="text-primary">*</span></label>
+              <input type="email" class="form-control" id="bookingEmail" placeholder="you@example.com" required />
+            </div>
+            <button type="submit" class="btn btn-primary w-100 fw-semibold py-2 rounded-3 mt-2">
+              <i class="bi bi-calendar-check me-2"></i>Book Now
+            </button>
+          </form>
+          <hr />
+          <div class="text-center">
+            <p class="small text-muted mb-1"><i class="bi bi-shield-check text-primary me-1"></i> Secure Booking</p>
+            <p class="small text-muted mb-0"><i class="bi bi-arrow-counterclockwise text-primary me-1"></i> Free Cancellation (30 days)</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer id="footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-3 col-md-6">
+        <img class="footer-logo" src="../assets/Images/Travora Footer2.png" alt="Travora Logo" />
+        <p>Your trusted partner for extraordinary travel experiences around the globe.</p>
+        <div class="dropdown mt-3">
+          <button class="currency-btn btn border rounded-2 fw-semibold d-flex align-items-center gap-1 dropdown-toggle" style="color: var(--tt-footer-text); border-color: rgba(255,255,255,0.15) !important;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-currency-dollar"></i> USD
+          </button>
+          <ul class="dropdown-menu border-0 shadow rounded-3 py-2">
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="USD"><i class="bi bi-currency-dollar me-1"></i>USD</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EUR"><i class="bi bi-currency-euro me-1"></i>EUR</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="GBP"><i class="bi bi-currency-pound me-1"></i>GBP</a></li>
+            <li><a class="dropdown-item fw-semibold" href="#" data-currency="EGP"><i class="bi bi-currency-exchange me-1"></i>EGP</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Contact</h5>
+        <p><i class="bi bi-telephone me-2 text-primary"></i>T: 1-634-567-34</p>
+        <p><i class="bi bi-envelope me-2 text-primary"></i>E: contact@traveltourtheme.co</p>
+        <div class="footer-social mt-3">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+          <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Useful Links</h5>
+        <ul class="footer-links">
+          <li><a href="blog.html">Travel Blog &amp; Tips</a></li>
+          <li><a href="about-us.html">Working With Us</a></li>
+          <li><a href="contact.html">Be Our Partner</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Pay Safely With Us</h5>
+        <p>The payment is encrypted and transmitted securely with an SSL protocol.</p>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="payment-icon"><i class="bi bi-credit-card-2-front"></i></span>
+          <span class="payment-icon"><i class="bi bi-credit-card"></i></span>
+          <span class="payment-icon"><i class="bi bi-paypal"></i></span>
+          <span class="payment-icon"><i class="bi bi-wallet2"></i></span>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+  </div>
+  <div class="footer-bottom">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <div>
+        <a href="../index.html">Home</a>
+        <a href="about-us.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="mb-0 text-muted">Copyright &copy; 2026 GoodLayers. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- AUTH MODAL -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg rounded-4">
+      <div class="modal-header border-bottom-0 pb-0">
+        <h5 class="modal-title neuton-bold fs-3" id="authModalLabel">Welcome to <span class="text-primary font-italic">Travora</span></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4 p-md-5 pt-3">
+        <ul class="nav nav-pills nav-fill mb-4 bg-light rounded-pill p-1" role="tablist">
+          <li class="nav-item" role="presentation"><button class="nav-link active rounded-pill fw-semibold" data-bs-toggle="pill" data-bs-target="#login" type="button">Login</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link rounded-pill fw-semibold" data-bs-toggle="pill" data-bs-target="#register" type="button">Register</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="login" role="tabpanel">
+            <form id="loginForm" novalidate>
+              <div class="mb-3"><label class="form-label fw-semibold small">Email <span class="text-primary">*</span></label><input type="email" class="form-control py-2" id="loginEmail" placeholder="you@example.com" required /></div>
+              <div class="mb-3"><label class="form-label fw-semibold small">Password <span class="text-primary">*</span></label><input type="password" class="form-control py-2" id="loginPassword" placeholder="Enter password" required /></div>
+              <button type="submit" class="btn btn-primary w-100 fw-semibold py-2 rounded-3">Login</button>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="register" role="tabpanel">
+            <form id="registerForm" novalidate>
+              <div class="mb-3"><label class="form-label fw-semibold small">Name <span class="text-primary">*</span></label><input type="text" class="form-control py-2" id="registerName" required /></div>
+              <div class="mb-3"><label class="form-label fw-semibold small">Email <span class="text-primary">*</span></label><input type="email" class="form-control py-2" id="registerEmail" required /></div>
+              <div class="mb-3"><label class="form-label fw-semibold small">Password <span class="text-primary">*</span></label><input type="password" class="form-control py-2" id="registerPassword" required /></div>
+              <div class="mb-4"><label class="form-label fw-semibold small">Confirm Password <span class="text-primary">*</span></label><input type="password" class="form-control py-2" id="registerConfirmPassword" required /></div>
+              <button type="submit" class="btn btn-primary w-100 fw-semibold py-2 rounded-3">Create Account</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+<div class="toast-container-fixed"></div>
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>
